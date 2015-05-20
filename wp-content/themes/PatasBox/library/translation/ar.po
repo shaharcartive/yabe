@@ -1,0 +1,255 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Crystal Premium Personal Blog WordPress Theme\n"
+"POT-Creation-Date: 2014-11-27 01:55+0200\n"
+"PO-Revision-Date: 2014-11-27 02:06+0200\n"
+"Last-Translator: Code125 <info@code125.com>\n"
+"Language-Team: Code125 <info@code125.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:12
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "‎هذا المقال محمي بكلمة سر، برجاء إدخال كلمة السر في مكانه"
+
+#: comments.php:24
+msgid "Website Comments"
+msgstr "‎تعليقات الموقع"
+
+#: comments.php:53
+msgid "Comments are closed."
+msgstr "‎التعليقات مغلقة"
+
+#: functions.php:354
+msgid "(Edit)"
+msgstr "‎تعديل"
+
+#: functions.php:359
+msgid "Your comment is awaiting moderation."
+msgstr "‎تعليقك في انتظار الموافقة"
+
+#: functions.php:391
+#, php-format
+msgid "Page %s"
+msgstr "‎الصفحة %s"
+
+#: library/includes/classes/class-article.php:107
+msgid "Related Articles"
+msgstr "‎مقالات ذات صلة"
+
+#: library/includes/classes/class-article.php:175
+msgid "Name:"
+msgstr "‎الإسم‫:‬"
+
+#: library/includes/classes/class-article.php:176
+msgid "Email:"
+msgstr "‎البريد الإلكتروني‫:‬"
+
+#: library/includes/classes/class-article.php:178
+msgid "Website:"
+msgstr "‎الموقع الإلكتروني‫:‬"
+
+#: library/includes/classes/class-article.php:188
+msgid "Post a comment"
+msgstr "‎أضف تعليق"
+
+#: library/includes/classes/class-article.php:190
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "‎أترك تعليق ل %s"
+
+#: library/includes/classes/class-article.php:191
+msgid "Cancel reply"
+msgstr "‎إلغي الرد"
+
+#: library/includes/classes/class-article.php:192
+msgid "Post comment."
+msgstr "‎أضف تعليق"
+
+#: library/includes/classes/class-article.php:193
+msgid "Message.."
+msgstr "‎الرسالة"
+
+#: library/includes/classes/class-article.php:204
+msgid "Facebook Comments"
+msgstr "‎تعليقات الفيسبوك"
+
+#: library/includes/classes/class-bread-crumb.php:75
+msgid "Archive by category \""
+msgstr "‎التصنيف "
+
+#: library/includes/classes/class-bread-crumb.php:77
+msgid "Search results for \""
+msgstr "‎نتائج البحث ل"
+
+#: library/includes/classes/class-bread-crumb.php:129
+msgid "Tag \""
+msgstr "‎الكلمات ذات صلة"
+
+#: library/includes/classes/class-bread-crumb.php:133
+msgid "Posted by "
+msgstr "‎كتب بواسطة"
+
+#: library/includes/classes/class-bread-crumb.php:135
+msgid "Error 404"
+msgstr "‎خطأ ٤٠٤"
+
+#: library/includes/classes/class-bread-crumb.php:141
+msgid "Page"
+msgstr "‎صفحة"
+
+#: library/includes/classes/class-header.php:107
+msgid "Type then hit return"
+msgstr "‎إكتب ما تبحث عنه ثم إضغط ذر الإدخال"
+
+#: library/includes/classes/class-header.php:382
+msgid "Search results for"
+msgstr "‎نتائج البحث ل"
+
+#: library/includes/classes/class-header.php:406
+msgid "404 Error, Page not Found"
+msgstr "‎٤٠٤، لم يتم إيجاد الصفحة"
+
+#: library/includes/classes/class-menu.php:104
+msgid "Move up"
+msgstr "‎التحرك للأعلي"
+
+#: library/includes/classes/class-menu.php:115
+msgid "Move down"
+msgstr "‎التحرك للأسفل"
+
+#: library/includes/classes/class-menu.php:117
+msgid "Edit Menu Item"
+msgstr ""
+
+#: library/includes/classes/class-post.php:1056
+msgid "Likes"
+msgstr "‎إعجاب"
+
+#: library/includes/classes/class-post.php:1207
+msgid "Read More"
+msgstr "‎إقرأ أيضا"
+
+#: library/includes/classes/class-post.php:1366
+#: library/includes/files/like.php:90 library/includes/files/like.php:93
+msgid "like"
+msgstr "‎أعجاب"
+
+#: library/includes/classes/class-post.php:1401
+#: library/includes/classes/class-post.php:1403
+#, php-format
+msgid "%s ago"
+msgstr "‎منذ %s"
+
+#: library/includes/templates/template-404.php:4
+msgid ""
+"Sorry, The page you are looking for is not available try searching for what "
+"you need. "
+msgstr "‎عذرا، الصفحة التي تبحث عنها غير متاحة"
+
+#: library/includes/templates/template-page.php:40
+msgid "Username"
+msgstr "‎إسم المستخدم"
+
+#: library/includes/templates/template-page.php:40
+msgid "Login in"
+msgstr "‎تسجيل الدخول"
+
+#: library/includes/templates/template-page.php:40
+msgid "Register"
+msgstr "‎تسجيل"
+
+#: library/includes/templates/template-page.php:40
+msgid "Forget Password ?"
+msgstr "‎نسيت كلمة السر؟"
+
+#: library/includes/templates/template-page.php:40
+msgid "Remember me ?"
+msgstr "‎تذكرني"
+
+#: library/includes/templates/template-single.php:57
+msgid "Pages:"
+msgstr "‎الصفحات‫:‬"
+
+#: library/includes/templates/template-single.php:75
+msgid "Share this article"
+msgstr "‎شارك هذا المقال"
+
+#: library/includes/templates/template-single.php:130
+msgid "Article Tags"
+msgstr "‎كلمات ذات صلة"
+
+#: library/includes/templates/template-single.php:206
+msgid "Oops, Post Not Found!"
+msgstr "‎عفوا، لا يوجد مقال"
+
+#: library/includes/templates/template-single.php:209
+msgid "Uh Oh. Something is missing. Try double checking things."
+msgstr ""
+
+#: library/includes/templates/template-single.php:212
+msgid "This is the error message in the single.php template."
+msgstr ""
+
+#: library/includes/widgets/widgets/contact_form.php:126
+msgid "Name: "
+msgstr "‎الإسم‫:‬"
+
+#: library/includes/widgets/widgets/contact_form.php:127
+msgid "Email: "
+msgstr "‎البريد الإلكتروني‫:‬"
+
+#: library/includes/widgets/widgets/contact_form.php:128
+msgid "Message: "
+msgstr "‎الرسالة‫:‬"
+
+#: library/includes/widgets/widgets/instagram.php:31
+msgid "Unable to communicate with Instagram."
+msgstr ""
+
+#: library/includes/widgets/widgets/instagram.php:34
+msgid "Instagram did not return a 200."
+msgstr ""
+
+#: library/includes/widgets/widgets/instagram.php:41
+msgid "Instagram has returned invalid data."
+msgstr ""
+
+#: library/includes/widgets/widgets/posts.php:127
+msgid "No Articles to show!"
+msgstr ""
+
+#: library/includes/widgets/widgets/posts.php:130
+msgid "No articles found to show on this page."
+msgstr ""
+
+#: library/includes/widgets/widgets/search.php:49
+#: library/includes/widgets/widgets/search.php:74
+msgid "Select Category"
+msgstr ""
+
+#: library/includes/widgets/widgets/sitemap.php:30
+msgid "Pages"
+msgstr ""
+
+#: library/includes/widgets/widgets/sitemap.php:36
+msgid "Categories"
+msgstr "‎التصنيفات"
+
+#: library/includes/widgets/widgets/sitemap.php:42
+msgid "Tags"
+msgstr "‎كلمات ذات صلة"
+
+#: library/includes/widgets/widgets/sitemap.php:51
+msgid "Authors"
+msgstr "‎الكتاب"

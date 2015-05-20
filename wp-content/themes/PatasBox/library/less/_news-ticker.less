@@ -1,0 +1,42 @@
+
+.tickercontainer {
+
+    min-height: 42px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    .mask {
+        position: relative;
+        top: 0px;
+        height: 42px;
+        overflow: hidden;
+    }
+}
+ul.newsticker {
+    -webkit-transition: all 0s linear;
+    -moz-transition: all 0s linear;
+    -o-transition: all 0s linear;
+    transition: all 0s linear;
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        float: left;
+        margin: 0;
+        padding-right: 40px;
+        line-height:42px;
+    }
+    a {
+        white-space: nowrap;
+        padding: 0;
+        margin: 0 10px 0 0;
+        color: #57595a;
+        &:hover{
+        	color: #333;
+        }
+    }
+    span {
+        margin: 0 10px 0 0;
+    }
+}

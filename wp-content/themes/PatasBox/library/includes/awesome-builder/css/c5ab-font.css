@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'c5abfont';
+  src: url('../fonts/c5ab-font/awesomebuilder.eot');
+  src: url('../fonts/c5ab-font/awesomebuilder.eot#iefix') format('embedded-opentype'),
+       url('../fonts/c5ab-font/awesomebuilder.woff') format('woff'),
+       url('../fonts/c5ab-font/awesomebuilder.ttf') format('truetype'),
+       url('../fonts/c5ab-font/awesomebuilder.svg#awesomebuilder') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'awesomebuilder';
+    src: url('../font/awesomebuilder.svg#awesomebuilder') format('svg');
+  }
+}
+*/
+ 
+ [class^="c5abf-"]:before, [class*=" c5abf-"]:before,.c5ab-full-i:after {
+  font-family: "c5abfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+ .c5abf-duplicate:before { content: '\e801'; } /* '' */
+ .c5abf-block:before { content: '\e81a'; } /* '' */
+ .c5abf-full-i:before { content: '\e805'; } /* '' */
+ .c5abf-half:before { content: '\e806'; } /* '' */
+ .c5abf-third:before { content: '\e807'; } /* '' */
+ .c5abf-quarter:before { content: '\e808'; } /* '' */
+ .c5abf-1o3-2o3---copy:before { content: '\e809'; } /* '' */
+ .c5abf-2o3-1o3:before { content: '\e80a'; } /* '' */
+ .c5abf-1o4-3o4:before { content: '\e80b'; } /* '' */
+ .c5abf-3o4-1o4:before { content: '\e80c'; } /* '' */
+ .c5abf-1o4-1o2-1o4:before { content: '\e80d'; } /* '' */
+ .c5abf-1o4-1o4-1o2:before { content: '\e80e'; } /* '' */
+ .c5abf-1o2-1o4-1o4:before { content: '\e80f'; } /* '' */
+ .c5abf-1o6:before { content: '\e802'; } /* '' */
+ .c5abf-full:before { content: '\e804'; } /* '' */
+ .c5abf-duplicate-i:before { content: '\e803'; } /* '' */
+ .c5abf-hdrag:before { content: '\e81b'; } /* '' */
+ .c5abf-plus-circled:before { content: '\e81c'; } /* '' */
+ .c5abf-trash:before { content: '\e814'; } /* '' */
+ .c5abf-cog:before { content: '\e815'; } /* '' */
+ .c5abf-down-open:before { content: '\e811'; } /* '' */
+ .c5abf-left-open:before { content: '\e812'; } /* '' */
+ .c5abf-right-open:before { content: '\e813'; } /* '' */
+ .c5abf-up-open:before { content: '\e810'; } /* '' */
+ .c5abf-laptop:before { content: '\e816'; } /* '' */
+ .c5abf-tablet:before { content: '\e817'; } /* '' */
+ .c5abf-mobile:before { content: '\e818'; } /* '' */
+ .c5abf-drag:before { content: '\e800'; } /* '' */
+
+

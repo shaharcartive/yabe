@@ -1,0 +1,441 @@
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Ville Ristimäki (@villeristi)
+ * 
+ */
+
+
+// ====================================================================================================================
+// LESS SNIPPETS
+// ====================================================================================================================*/
+
+
+
+
+//
+// Box-shadow
+//
+
+.c5-box-shadow( @x-axis: 0, @y-axis: 1px, @blur: 2px, @color: rgba( 0, 0, 0, 0.1 ), @inset: '' ) {
+  
+  -webkit-box-shadow: @inset @x-axis @y-axis @blur @color;
+     -moz-box-shadow: @inset @x-axis @y-axis @blur @color;
+       -o-box-shadow: @inset @x-axis @y-axis @blur @color;
+          box-shadow: @inset @x-axis @y-axis @blur @color;
+
+}
+
+
+
+
+
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+
+
+
+
+
+
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+
+
+.flex-container, .flex-slider{
+	a:hover, a:focus{
+		outline: none;
+	}
+
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  
+  margin: 0 !important; 
+  padding: 0; 
+  list-style: none;
+
+}
+
+.flex-pauseplay span {
+
+  text-transform: capitalize;
+
+}
+
+
+
+
+
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+
+
+.flexslider {
+
+  margin: 0; 
+  padding: 0;
+
+  .slides {
+
+    > li {
+
+      display: none; 
+      -webkit-backface-visibility: hidden;
+
+    }
+
+    img{
+
+      width: 100%;
+      display: block;
+		margin: 0px;
+    }
+
+
+    //
+    // Clearfix for the .slides element
+    //
+
+    &:after{
+
+      content: "\0020"; 
+      display: block; 
+      clear: both; 
+      visibility: hidden; 
+      line-height: 0; 
+      height: 0;
+
+
+    }
+
+    html[xmlns] &{
+      
+      display: block;
+
+    }
+
+    * html &{
+      
+      height: 1%;
+
+    }
+
+
+    
+     // 
+     // No JavaScript Fallback
+     // If you are not using another script, such as Modernizr, make sure you
+     // include js that eliminates this class on page load
+     // 
+    
+
+    .no-js &{
+
+      > li{
+
+        &:first-child{
+
+          display: block;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+
+
+.flexslider { 
+
+  position: relative;
+  zoom: 1; 
+
+
+  .slides{
+
+    zoom: 1;
+
+  }
+}
+
+.flex-viewport { 
+
+  max-height: 2000px; 
+
+  .transition();
+
+  .loading &{
+
+    max-height: 300px;
+
+  }
+}
+
+.carousel li { 
+
+  margin-right: 5px; 
+
+}
+
+
+//
+// Direction Nav
+//
+
+.flex-direction-nav {
+	position: absolute;
+	width: 80px;
+	bottom: 10px;
+	right: 0px;
+
+  
+  //
+  // Global styles
+  //
+
+  a  { 
+
+    text-decoration:none; 
+    display: block; 
+    width: 30px; 
+    height: 30px; 
+    line-height:30px;
+    font-size:14px;
+    z-index: 10; 
+    overflow: hidden; 
+    cursor: pointer; 
+    color: #eee; 
+	float: left;
+	text-align: center;
+	margin-right: 10px;
+	background: rgba(0,0,0,0.5);
+    .transition( 0.3s );
+	&:hover{
+		background: #333; 
+		background: rgba(0,0,0,0.7);
+	}
+    &:before  { 
+
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      
+      line-height:30px;
+      font-size:14px;
+      
+      content: "\f104";
+
+    }
+
+    &.flex-next:before { 
+
+      content: "\f105";
+
+    }
+
+  }
+
+
+  
+
+
+  //
+  // Disabled
+  //
+
+  .flex-disabled { 
+
+    opacity: 0!important; 
+    filter: alpha(opacity=0); 
+    cursor: default;
+
+  }
+}
+
+
+//
+// Pause/Play
+//
+
+.flex-pauseplay a {
+
+  display: block; 
+  width: 20px; 
+  height: 20px; 
+  position: absolute; 
+  bottom: 5px; 
+  left: 10px; 
+  opacity: 0.8; 
+  z-index: 10; 
+  overflow: hidden; 
+  cursor: pointer; 
+  color: #000;
+	text-indent: -9999px;
+  &:before { 
+
+    font-family: "flexslider-icon"; 
+    font-size: 20px; 
+    display: inline-block; 
+    content: '\f004';
+
+  }
+
+  &:hover {
+
+    opacity: 1;
+
+  }
+
+  .flex-play:before { 
+
+    content: '\f003';
+
+  }
+
+}
+
+
+//
+// Control Nav
+//
+
+.flex-control-nav {
+
+  position: absolute; 
+  bottom: 10px;
+  right: 90px;
+  height: 30px;
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  color: #eee;
+
+  li {
+    
+    margin: 0 5px; 
+    display: inline-block; 
+    zoom: 1; 
+    *display: inline;
+
+  }
+
+}
+
+
+//
+// Control paging
+//
+
+.flex-control-paging li {
+
+  a {
+
+    width: 11px; 
+    height: 11px; 
+    display: block; 
+    background: #eee; 
+    cursor: pointer; 
+    text-indent: -9999px;
+    .border-radius( 20px );
+
+    &:hover { 
+
+      background: #333; 
+      background: rgba(0,0,0,0.7);
+
+    }
+
+    &.flex-active { 
+
+      background: #000;
+      background: rgba( 0, 0, 0, 0.9 );
+      cursor: default;
+
+    }
+  }
+}
+
+
+.flex-control-thumbs {
+
+  margin: 5px 0 0; 
+  position: static; 
+  overflow: hidden;
+
+  li {
+
+    width: 25%; 
+    float: left; 
+    margin: 0;
+
+  }
+
+  img {
+  
+    width: 100%; 
+    display: block; 
+    opacity: .7; 
+    cursor: pointer;
+
+    .transition();
+
+    &:hover {opacity: 1;}
+
+  }
+
+  .flex-active {
+
+    opacity: 1; 
+    cursor: default;
+
+  }
+}
+
+
+
+
+
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+
+@media screen and ( max-width: 860px ) {
+
+  .flex-direction-nav{
+
+    .flex-prev { 
+
+      opacity: 1; 
+      left: 10px;
+
+    }
+
+    .flex-next { 
+
+      opacity: 1; 
+      right: 10px;
+
+    }
+  }
+}

@@ -1,0 +1,214 @@
+.wp-menu-image img{
+	width: 20px;
+}
+#wpadminbar ul li.c5-video-tutorial{
+	cursor: pointer;
+	padding: 5px;
+	border-bottom:1px solid #444;
+	border-top:1px solid #222;
+}
+#wpadminbar ul li.c5-video-tutorial:hover{
+	background: #111;
+}
+
+#wpadminbar #wp-admin-bar-c5_video_tutorials-default.ab-submenu{
+	padding: 0px;
+}
+
+ul.c5-span-icons{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.c5-span-icons li{
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin: 0px;
+	font-size: 22px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+ul.c5-span-icons li.selected,
+ul.c5-span-icons li:hover{
+	background: #d64a2b;
+	color: white;
+}
+.mfp-install-demo-post .button{
+	margin:0px 5px;
+}
+
+.mfp-install-demo-post.mfp-auto-cursor .mfp-content {
+max-width: 500px;
+background: white;
+padding: 30px;
+overflow: scroll;
+max-height: 500px;
+}
+.mfp-install-demo-post.mfp-auto-cursor .mfp-content pre{
+	overflow: scroll;
+	line-height: 1.1;
+	background: #eee;
+	padding: 10px;
+}
+
+.c5-main-panel{
+	padding: 0px;
+}
+.c5-main-panel .format-setting-label{
+	border:none;
+}
+
+.c5-quick-slide-wrap{
+	position: relative;
+	display: block;
+}
+.c5-quick-slide-wrap .section-wrap{
+	width: 30%;
+	float: left;
+	box-sizing: border-box;
+	padding: 30px;
+}
+.c5-quick-slide-wrap .options-wrap{
+	width: 70%;
+	float: left;
+	box-sizing: border-box;
+	padding: 30px 30px 250px 30px;
+	background: #f8f8f8;
+	min-height:1000px;
+}
+.welcome-panel .c5-quick-slide-wrap .about-description {
+	font-size: 15px;
+	margin: 0px 0 20px;
+	line-height: 1.7;
+	text-indent: 20px;
+}
+.welcome-panel .c5-quick-slide-wrap h3 {
+	margin: 0 0 15px;
+}
+.welcome-panel .c5-quick-slide-wrap h4{
+	margin: 0px;
+}
+.c5-quick-slide-wrap .c5-next-page{
+	
+}
+.c5-quick-slide-wrap .c5-prev-page{
+	
+}
+.c5-install-widgets .fa{
+	margin-right:5px;
+}
+.c5_initial_setup{
+	width: 40%;
+	position: fixed;
+	background: white;
+	padding: 20px;
+	left: 30%;
+	top: 30%;
+	box-shadow: 0px 0px 20px #333;
+	border-radius: 2px;
+	z-index:500;
+}
+.c5_initial_setup .button{
+	margin-right:10px;
+	margin-bottom:10px;
+	
+}
+.c5-successfully{
+	padding: 30px;	
+}
+
+
+.c5-setting-wrap-render_type .type-radio-image .option-tree-ui-radio-images,
+#setting_default_blog_layout  .type-radio-image .option-tree-ui-radio-images,
+.c5-setting-wrap-default_blog_layout .type-radio-image .option-tree-ui-radio-images{
+	margin: 0 5px 10px 5px;
+	width: 320px;
+}
+.c5-setting-wrap-render_type .type-radio-image .option-tree-ui-radio-images img,
+#setting_default_blog_layout  .type-radio-image .option-tree-ui-radio-images img,
+.c5-setting-wrap-default_blog_layout .type-radio-image .option-tree-ui-radio-images img{ 
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+
+.c5-import-signle{
+	position: relative;
+	display: block;
+	border: 1px solid #ccc;
+	margin-bottom:50px;
+}
+.c5-import-signle .item-wrap{
+	position: relative;
+	display: block;
+}
+.c5-import-signle h4{
+	margin: 0px !important;
+	line-height: 1;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	padding: 15px 17px;
+	
+}
+.c5-import-signle .img-wrap{
+	max-height:300px;
+	display: block;
+	overflow: hidden;
+}
+
+.c5-import-signle .img-wrap img{
+	-webkit-transition: all 4s ease;
+	-moz-transition: all 4s ease;
+	-o-transition: all 4s ease;
+	-ms-transition: all 4s ease;
+	transition: all 4s ease;
+}
+
+.c5-import-signle:hover .img-wrap img{
+	-webkit-transform: translate(0,-81%);
+	-moz-transform: translate(0,-81%);
+	-ms-transform: translate(0,-81%);
+	-o-transform: translate(0,-81%);
+	transform: translate(0,-81%);
+}
+
+.c5-import-signle .buttons-wrap{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	top: 0px;
+	padding-top: 50px;
+	background: rgba(0,0,0,0.3);
+	opacity: 0;
+	visibility: hidden;
+	
+	
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.c5-import-signle:hover .buttons-wrap{
+	opacity: 1;
+	visibility: visible;
+}
+
+.c5-import-signle .buttons-wrap button{
+	margin-bottom:30px;
+}
+
+h2.c5-demo-heading{
+	margin: 30px 25px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 36px;
+	border-top: 1px solid #ccc;
+	padding-top: 30px;
+}

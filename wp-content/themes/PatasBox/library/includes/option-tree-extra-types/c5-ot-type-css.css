@@ -1,0 +1,105 @@
+/* option-tree custom option types*/
+ul.c5-current-values,
+ul.c5-posts-current-values{
+	margin: 0px 0px 10px;
+	padding: 0px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	min-height: 40px;
+}
+ul.c5-current-values li,
+ul.c5-posts-current-values li{
+	display: block;
+	background: #fff;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	margin: 5px;
+	line-height: 20px;
+	cursor: move;
+}
+
+ul.c5-posts-current-values li.c5-article-placeholder{
+	min-height:22px;
+	min-width:100px;
+}
+ul.c5-current-values li .fa,
+ul.c5-posts-current-values li .fa{
+	display: block;
+	float: right;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	background: #f0f4c3;
+	cursor: pointer;
+	text-align: center;
+	line-height: 20px;
+	margin-left: 10px;
+}
+
+.format-setting.type-post-search,
+.format-setting.c5-author-search{
+	overflow: visible;
+}
+
+/*meta sorter*/
+
+ul.c5-meta-data-values {
+	margin: 0px 0px 10px;
+	padding: 0px;
+	min-height: 40px;
+}
+ul.c5-meta-data-values li{
+	display: block;
+	position: relative;
+	background: #fff;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	margin: 0px 0px 5px;
+	line-height: 20px;
+	cursor: move;
+	
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+ul.c5-meta-data-values li.c5-article-placeholder{
+	min-height:22px;
+	min-width:100px;
+}
+ul.c5-meta-data-values li .fa.c5-change-status{
+	display: block;
+	height: 30px;
+	width: 40px;
+	color: #259b24;
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+	margin-left: 10px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+ul.c5-meta-data-values li.c5-current-status-off .fa.c5-change-status{
+	color: #c41411;
+}
+ul.c5-meta-data-values li.c5-current-status-off{
+	opacity: 0.5;
+}
+
+ul.c5-meta-data-values li .c5-icon-item{
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	cursor: pointer;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 10px;
+}

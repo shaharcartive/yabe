@@ -1,0 +1,36 @@
+@grey:#e0e0e0;
+@light:#f6f6f6;
+@dark:#1f1f1f;
+@text:#919191;
+
+
+.transition(@time: 0.2s){
+	-moz-transition:all @time ease;
+	-o-transition:all @time ease;
+	-webkit-transition:all @time ease;
+	-ms-transition:all @time ease;
+	transition:all @time ease;
+}
+
+.c5_blur(@amount:5px){
+	-webkit-filter: blur(@amount);
+	-moz-filter: blur(@amount);
+	-o-filter: blur(@amount);
+	-ms-filter: blur(@amount);
+	filter: blur(@amount);
+}
+
+
+.c5_gradient(@color){
+	@color_darker: darken(@color, 5%);
+	background: @color; /* Old browsers */
+	background: -moz-linear-gradient(top,  @color 0%,  @color_darker 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color), color-stop(100%,@color_darker)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @color 0%, @color_darker 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @color 0% ,@color_darker 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @color 0% ,@color_darker 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  @color 0% ,@color_darker 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color', endColorstr='@color_darker',GradientType=0 ); /* IE6-9 */
+	
+
+}

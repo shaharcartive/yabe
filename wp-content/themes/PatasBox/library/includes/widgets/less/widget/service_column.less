@@ -1,0 +1,71 @@
+//------------------------------------- services -------------------------
+
+.services_wrapper{
+	color: @text;     
+   .round-green {
+       border-radius: 100%;
+       display: inline-block;
+       font-size: 25px;
+       width: 80px;
+       height: 80px;
+   	line-height: 80px; 
+   	color: white;
+   	.transition();
+   	
+   	
+   } 
+    .service-item{
+    	margin-bottom:30px;
+    	.service-item-wrap{
+    		border: 1px solid @grey;
+    		padding:30px;
+    		text-align: center;
+    		border-radius:2px;
+    		position:relative;
+    	}
+    	&:hover{
+    		.round-green {
+    		    
+    				-webkit-animation: c5_waves_animation 1s infinite; /* Safari 4+ */
+    				  -moz-animation:    c5_waves_animation 1s infinite; /* Fx 5+ */
+    				  -o-animation:      c5_waves_animation 1s infinite; /* Opera 12+ */
+    				  -ms-animation:      c5_waves_animation 1s infinite; /* Opera 12+ */
+    				  animation:         c5_waves_animation 1s infinite; 
+    		}
+    		
+    	} 
+    	.upper_half, .lower_half {
+    	border: 1px solid @grey;
+    	}
+        .upper_half{
+            padding:40px 40px 65px;
+            text-align: center;
+            border-radius:2px;
+            position:relative;
+            border-bottom:none;
+            background: @light;
+            .service-cta{
+            	   left: 0px;
+            	   bottom: -22px;
+            	   text-align:Center;
+            	   position: absolute;
+            	   width:100%;
+          }
+        } 
+        .lower_half{
+            padding:50px; 
+            background: white;
+            h5{
+                text-align:center;
+                font-weight:bold;
+                font-size:16px;
+                margin: 0px;
+            }
+            p{
+                text-align: center;
+                margin-top:15px;
+                font-size:12px;
+            }
+        }
+    }
+}

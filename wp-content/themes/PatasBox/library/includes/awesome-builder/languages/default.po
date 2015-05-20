@@ -1,0 +1,556 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Awesome Builder\n"
+"POT-Creation-Date: 2014-02-23 07:53+0200\n"
+"PO-Revision-Date: 2014-02-23 07:53+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/element.php:128 classes/row.php:527 classes/row.php:546
+msgid "Duplicate"
+msgstr ""
+
+#: classes/element.php:129 classes/row.php:528 classes/row.php:547
+msgid "Delete"
+msgstr ""
+
+#: classes/element.php:163
+msgid "No Animation"
+msgstr ""
+
+#: classes/element.php:167
+msgid "Flip In Horizontally"
+msgstr ""
+
+#: classes/element.php:171
+msgid "Flip In Vertically"
+msgstr ""
+
+#: classes/element.php:175
+msgid "Fade In"
+msgstr ""
+
+#: classes/element.php:179
+msgid "Fade In Up"
+msgstr ""
+
+#: classes/element.php:183
+msgid "Fade In Down"
+msgstr ""
+
+#: classes/element.php:187
+msgid "Fade In Left"
+msgstr ""
+
+#: classes/element.php:191
+msgid "Fade In Right"
+msgstr ""
+
+#: classes/element.php:195
+msgid "Fade In Up Big"
+msgstr ""
+
+#: classes/element.php:199
+msgid "Fade In Down Big"
+msgstr ""
+
+#: classes/element.php:203
+msgid "Fade In Left Big"
+msgstr ""
+
+#: classes/element.php:207
+msgid "Fade In Right Big"
+msgstr ""
+
+#: classes/element.php:212
+msgid "Slide In Down"
+msgstr ""
+
+#: classes/element.php:216
+msgid "Slide In Left"
+msgstr ""
+
+#: classes/element.php:220
+msgid "Slide In Right"
+msgstr ""
+
+#: classes/element.php:225
+msgid "Bounce In"
+msgstr ""
+
+#: classes/element.php:229
+msgid "Bounce In Down"
+msgstr ""
+
+#: classes/element.php:233
+msgid "Bounce In Up"
+msgstr ""
+
+#: classes/element.php:237
+msgid "Bounce In Left"
+msgstr ""
+
+#: classes/element.php:241
+msgid "Bounce In Right"
+msgstr ""
+
+#: classes/element.php:246
+msgid "Rotate In"
+msgstr ""
+
+#: classes/element.php:250
+msgid "Rotate In Down Left"
+msgstr ""
+
+#: classes/element.php:254
+msgid "Rotate In Down Right"
+msgstr ""
+
+#: classes/element.php:258
+msgid "Rotate In Up Left"
+msgstr ""
+
+#: classes/element.php:262
+msgid "Rotate In Up Right"
+msgstr ""
+
+#: classes/element.php:283
+msgid "Click on animation and see me."
+msgstr ""
+
+#: classes/element.php:288 classes/row.php:284 includes/ajax.php:321
+msgid "Close"
+msgstr ""
+
+#: classes/element.php:295 classes/row.php:291
+msgid "Show/Hide on Desktop"
+msgstr ""
+
+#: classes/element.php:300 classes/row.php:296
+msgid "Show/Hide on Tablet"
+msgstr ""
+
+#: classes/element.php:305 classes/row.php:301
+msgid "Show/Hide on Mobile"
+msgstr ""
+
+#: classes/element.php:316
+msgid "Animation"
+msgstr ""
+
+#: classes/element.php:329
+msgid "Animation Duration (micro Second):"
+msgstr ""
+
+#: classes/element.php:339
+msgid "Animation Delay (micro Second):"
+msgstr ""
+
+#: classes/element.php:366 classes/row.php:331 classes/settings.php:80
+msgid "Save Changes"
+msgstr ""
+
+#: classes/generator.php:13
+msgid "Insert shortcode"
+msgstr ""
+
+#: classes/row.php:81
+msgid "Custom Class"
+msgstr ""
+
+#: classes/row.php:84
+msgid "Add Custom Class to this row ."
+msgstr ""
+
+#: classes/row.php:92
+msgid "Full Width"
+msgstr ""
+
+#: classes/row.php:95
+msgid "Choose whether to Open Full Width or No ."
+msgstr ""
+
+#: classes/row.php:103
+msgid "Row Width"
+msgstr ""
+
+#: classes/row.php:106
+msgid ""
+"Choose whether to follow the width you added in settings or add a custom "
+"width."
+msgstr ""
+
+#: classes/row.php:110
+msgid "Default Width"
+msgstr ""
+
+#: classes/row.php:114
+msgid "Custom Width \"Below\""
+msgstr ""
+
+#: classes/row.php:124
+msgid "Custom Row width"
+msgstr ""
+
+#: classes/row.php:127
+msgid "Add the custom width you want for that row."
+msgstr ""
+
+#: classes/row.php:137
+msgid "Text and Blocks Alignment"
+msgstr ""
+
+#: classes/row.php:148
+msgid "Columns margin"
+msgstr ""
+
+#: classes/row.php:151
+msgid "Add columns margin in pixels, Default is 30."
+msgstr ""
+
+#: classes/row.php:160
+msgid "Video Background mp4"
+msgstr ""
+
+#: classes/row.php:163
+msgid "Add Video background (mp4 format) for this row."
+msgstr ""
+
+#: classes/row.php:171
+msgid "Video Background ogg"
+msgstr ""
+
+#: classes/row.php:174
+msgid "Add Video background for (ogg format) this row."
+msgstr ""
+
+#: classes/row.php:182
+msgid "Video Background webm"
+msgstr ""
+
+#: classes/row.php:185
+msgid "Add Video background for (webm format) this row."
+msgstr ""
+
+#: classes/row.php:193
+msgid "Background"
+msgstr ""
+
+#: classes/row.php:196
+msgid "Add background for this row."
+msgstr ""
+
+#: classes/row.php:204
+msgid "Background Mode"
+msgstr ""
+
+#: classes/row.php:207
+msgid "Choose Background Mode, Light or Dark ."
+msgstr ""
+
+#: classes/row.php:225
+msgid "Row margin top"
+msgstr ""
+
+#: classes/row.php:228
+msgid "Add Row margin-top in pixels, Default is 0px."
+msgstr ""
+
+#: classes/row.php:237
+msgid "Row margin bottom"
+msgstr ""
+
+#: classes/row.php:240
+msgid "Add Row margin-bottom in pixels, Default is 0px."
+msgstr ""
+
+#: classes/row.php:249
+msgid "Row Padding top"
+msgstr ""
+
+#: classes/row.php:252
+msgid "Add Row Padding-top in pixels, Default is 0px."
+msgstr ""
+
+#: classes/row.php:261
+msgid "Row Padding bottom"
+msgstr ""
+
+#: classes/row.php:264
+msgid "Add Row Padding-bottom in pixels, Default is 0px."
+msgstr ""
+
+#: classes/row.php:281
+msgid "Row Settings"
+msgstr ""
+
+#: classes/row.php:529 classes/row.php:536
+msgid "Move"
+msgstr ""
+
+#: classes/row.php:535
+msgid "Move Up"
+msgstr ""
+
+#: classes/row.php:537
+msgid "Move Down"
+msgstr ""
+
+#: classes/row.php:545
+msgid "Edit Settings"
+msgstr ""
+
+#: classes/settings.php:65
+msgid "Awesome Builder Settings"
+msgstr ""
+
+#: classes/settings.php:126
+msgid "Grid Column Count"
+msgstr ""
+
+#: classes/settings.php:129
+msgid ""
+"Page Column Count for your grid, <strong>Warning</strong> changing your grid "
+"wil cause your saved templates to look weird, half column in 12 will be "
+"rendered as a quarter column in 24 column based."
+msgstr ""
+
+#: classes/settings.php:138
+msgid "Load Awesome Builder Widgets"
+msgstr ""
+
+#: classes/settings.php:141
+msgid "Choose whether to load awesome builder widgets."
+msgstr ""
+
+#: classes/settings.php:149
+msgid "Enable For Post Types"
+msgstr ""
+
+#: classes/settings.php:152
+msgid "Select Post Types to enable Page Builder for it."
+msgstr ""
+
+#: classes/settings.php:161
+msgid "Enable Tablet Grid"
+msgstr ""
+
+#: classes/settings.php:164
+msgid "Choose Yes to enable Tablet Grid."
+msgstr ""
+
+#: classes/settings.php:172
+msgid "Enable Mobile Grid"
+msgstr ""
+
+#: classes/settings.php:175
+msgid "Choose Yes to enable Mobile Grid."
+msgstr ""
+
+#: classes/settings.php:183
+msgid "Content Width"
+msgstr ""
+
+#: classes/settings.php:186
+msgid "Add the page content width in pixels."
+msgstr ""
+
+#: classes/settings.php:195
+msgid "Tablet Width For Media Query"
+msgstr ""
+
+#: classes/settings.php:198
+msgid ""
+"Add the page width in pixels in Tablet \"This will affect the media query "
+"that will fire the tablet responsive grid\"."
+msgstr ""
+
+#: classes/settings.php:207
+msgid "Mobile Width For Media Query"
+msgstr ""
+
+#: classes/settings.php:210
+msgid ""
+"Add the page width in pixels in Mobile \"This will affect the media query "
+"that will fire the mobile responsive grid\"."
+msgstr ""
+
+#: classes/settings.php:219
+msgid "Before Content HTML."
+msgstr ""
+
+#: classes/settings.php:222
+msgid "The HTML that will close the current HTML to enable full width css."
+msgstr ""
+
+#: classes/settings.php:230
+msgid "After Content HTML"
+msgstr ""
+
+#: classes/settings.php:233
+msgid "The HTML that will begin after the page."
+msgstr ""
+
+#: classes/settings.php:241
+msgid "Custom CSS"
+msgstr ""
+
+#: classes/settings.php:244
+msgid "Custom CSS."
+msgstr ""
+
+#: classes/settings.php:256
+msgid "Primary Color"
+msgstr ""
+
+#: classes/settings.php:259
+msgid "Primary Color for Widgets."
+msgstr ""
+
+#: classes/settings.php:268
+msgid "Light Color"
+msgstr ""
+
+#: classes/settings.php:271
+msgid "Light Color for Widgets."
+msgstr ""
+
+#: classes/settings.php:280
+msgid "Dark Color"
+msgstr ""
+
+#: classes/settings.php:283
+msgid "Dark Color for Widgets."
+msgstr ""
+
+#: classes/settings.php:292
+msgid "Grey Color"
+msgstr ""
+
+#: classes/settings.php:295
+msgid "Grey Color for Widgets."
+msgstr ""
+
+#: classes/settings.php:304
+msgid "Text Color"
+msgstr ""
+
+#: classes/settings.php:307
+msgid "Text Color for Widgets."
+msgstr ""
+
+#: classes/user.php:46
+msgid "Select the Widget to Show/Hide for this user."
+msgstr ""
+
+#: includes/ajax.php:9
+msgid "Start typing the widget name"
+msgstr ""
+
+#: includes/ajax.php:256
+msgid "Start typing the shortcode name"
+msgstr ""
+
+#: includes/ajax.php:329
+msgid "Generate Code"
+msgstr ""
+
+#: includes/panel.php:21
+msgid "Load Template"
+msgstr ""
+
+#: includes/panel.php:43
+msgid "Desktop"
+msgstr ""
+
+#: includes/panel.php:45
+msgid "Tablet"
+msgstr ""
+
+#: includes/panel.php:48
+msgid "Phone"
+msgstr ""
+
+#: includes/panel.php:99
+msgid "Quick tour"
+msgstr ""
+
+#: loader.php:269
+msgid "Show Awesome Builder"
+msgstr ""
+
+#: loader.php:269
+msgid "Show classical Editor"
+msgstr ""
+
+#: loader.php:316
+msgid "Awesome Builder"
+msgstr ""
+
+#: widgets/widgets/contact_form.php:194
+msgid "Name: "
+msgstr ""
+
+#: widgets/widgets/contact_form.php:195
+msgid "Email: "
+msgstr ""
+
+#: widgets/widgets/contact_form.php:196
+msgid "Message: "
+msgstr ""
+
+#: widgets/widgets/search.php:49 widgets/widgets/search.php:74
+msgid "Select Category"
+msgstr ""
+
+#: widgets/widgets/sitemap.php:30
+msgid "Pages"
+msgstr ""
+
+#: widgets/widgets/sitemap.php:36
+msgid "Categories"
+msgstr ""
+
+#: widgets/widgets/sitemap.php:42
+msgid "Tags"
+msgstr ""
+
+#: widgets/widgets/sitemap.php:51
+msgid "Authors"
+msgstr ""
+
+#: widgets/widgets/social_icons.php:40
+msgid "Search Your website ..."
+msgstr ""
+
+#: widgets/widgets/social_icons.php:72
+msgid "Username"
+msgstr ""
+
+#: widgets/widgets/social_icons.php:72
+msgid "Login in"
+msgstr ""
+
+#: widgets/widgets/social_icons.php:72
+msgid "Register"
+msgstr ""
+
+#: widgets/widgets/social_icons.php:72
+msgid "Forget Password ?"
+msgstr ""
+
+#: widgets/widgets/social_icons.php:72
+msgid "Remember me ?"
+msgstr ""

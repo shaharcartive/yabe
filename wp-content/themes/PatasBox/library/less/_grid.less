@@ -1,0 +1,285 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.less stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+
+
+/*
+'728-C',
+'960-B-C',
+'960-C-B',
+'960-C-S',
+'960-C',
+'960-S-C',
+'1170-B-C-S',
+'1170-B-C',
+'1170-B-S-C',
+'1170-C-B-S',
+'1170-C-B',
+'1170-C-S-B',
+'1170-C-S',
+'1170-C',
+'1170-S-B-C',
+'1170-S-C-B',
+'1170-S-C',
+*/
+
+@small_sidebar:160;
+@large_sidebar:300;
+//small-sidebar
+.c5-sidebar-small-1170-S-C-B,
+.c5-sidebar-small-1170-B-C-S, 
+.c5-sidebar-small-1170-B-S-C, 
+.c5-sidebar-small-1170-C-B-S, 
+.c5-sidebar-small-1170-C-S-B, 
+.c5-sidebar-small-1170-S-B-C,
+.c5-sidebar-small-1170-S-C,
+.c5-sidebar-small-1170-C-S{
+	width: percentage( (@small_sidebar+@padding)/(1200));
+}
+.c5-sidebar-small-960-C-S, 
+.c5-sidebar-small-960-S-C{
+	width: percentage( (@small_sidebar+@padding)/(990));
+}
+
+//big sidebar
+.c5-sidebar-big-1170-S-C-B,
+.c5-sidebar-big-1170-B-C-S, 
+.c5-sidebar-big-1170-B-S-C, 
+.c5-sidebar-big-1170-C-B-S, 
+.c5-sidebar-big-1170-C-S-B, 
+.c5-sidebar-big-1170-S-B-C,
+.c5-sidebar-big-1170-B-C,
+.c5-sidebar-big-1170-C-B{
+	width: percentage( (@large_sidebar+@padding)/(1200));
+}
+.c5-sidebar-big-960-C-B, 
+.c5-sidebar-big-960-B-C{
+	width: percentage( (@large_sidebar+@padding)/(990));
+}
+
+//main content
+.c5-main-1170-S-C-B,
+.c5-main-1170-B-C-S, 
+.c5-main-1170-B-S-C, 
+.c5-main-1170-C-B-S, 
+.c5-main-1170-C-S-B, 
+.c5-main-1170-S-B-C{
+	width: percentage( (1200 - (@small_sidebar+@padding+@padding+@large_sidebar))/(1200));
+}
+.c5-main-1170-S-C,
+.c5-main-1170-C-S{
+	width: percentage( (1200 - (@small_sidebar+@padding))/(1200));
+}
+.c5-main-1170-B-C,
+.c5-main-1170-C-B{
+	width: percentage( (1200 - (@large_sidebar+@padding))/(1200));
+}
+.c5-main-960-C-B, 
+.c5-main-960-B-C{
+	width: percentage( (990 - (@large_sidebar+@padding))/(990));
+}
+.c5-main-960-C-S, 
+.c5-main-960-S-C{
+	width: percentage( (990 - (@small_sidebar+@padding))/(990));
+}
+
+.c5-main-1170-C,
+.c5-main-960-C,
+.c5-main-728-C{
+	width: 100%;
+}
+
+//Breaking News
+
+.c5-breaking-1170-S-C-B,
+.c5-breaking-1170-S-C{
+	width: percentage( (1200 - (@small_sidebar+@padding))/(1200));
+}
+.c5-breaking-1170-B-C,
+.c5-breaking-1170-B-C-S{
+	width: percentage( (1200 - (@large_sidebar+@padding))/(1200));
+}
+ 
+.c5-breaking-960-B-C{
+	width: percentage( (990 - (@large_sidebar+@padding))/(990));
+}
+ 
+.c5-breaking-960-S-C{
+	width: percentage( (990 - (@small_sidebar+@padding))/(990));
+}
+
+
+.c5-breaking-1170-S-B-C,
+.c5-breaking-1170-B-S-C{
+	width: percentage( (1200 - (@small_sidebar + @large_sidebar+@padding+@padding))/(1200));
+}
+
+.c5-breaking-1170-C,
+.c5-breaking-960-C,
+.c5-breaking-728-C,
+.c5-breaking-1170-C-S, 
+.c5-breaking-1170-C-B-S, 
+.c5-breaking-1170-C-S-B,
+.c5-breaking-1170-C-B,
+.c5-breaking-960-C-B,
+.c5-breaking-960-C-S{
+	width: 100%;
+}
+
+@media (max-width:1024px){
+	.c5-main-1170-S-C-B,
+	.c5-main-1170-B-C-S, 
+	.c5-main-1170-B-S-C, 
+	.c5-main-1170-C-B-S, 
+	.c5-main-1170-C-S-B, 
+	.c5-main-1170-S-B-C,
+	.c5-main-1170-B-C,
+	.c5-main-1170-C-B,
+	.c5-main-960-C-B, 
+	.c5-main-960-B-C{
+		width: percentage( (994 - (30+@large_sidebar))/(994));
+	}
+	.c5-main-1170-S-C,
+	.c5-main-1170-C-S,
+	.c5-main-960-C-S, 
+	.c5-main-960-S-C{
+		width: percentage( (994 - (@small_sidebar+@padding))/(994));
+	}
+	
+	.c5-sidebar-small-1170-S-C-B,
+	.c5-sidebar-small-1170-B-C-S, 
+	.c5-sidebar-small-1170-B-S-C, 
+	.c5-sidebar-small-1170-C-B-S, 
+	.c5-sidebar-small-1170-C-S-B, 
+	.c5-sidebar-small-1170-S-B-C{
+		width: 190px;
+		position: absolute;
+		display: none;
+		left:-200px;
+	}
+	.c5-sidebar-small-960-C-S, 
+	.c5-sidebar-small-960-S-C,
+	.c5-sidebar-small-1170-S-C,
+	.c5-sidebar-small-1170-C-S{
+		width: percentage( (@small_sidebar+@padding)/(994));
+	}
+	
+	
+	.c5-sidebar-big-1170-S-C-B,
+	.c5-sidebar-big-1170-B-C-S, 
+	.c5-sidebar-big-1170-B-S-C, 
+	.c5-sidebar-big-1170-C-B-S, 
+	.c5-sidebar-big-1170-C-S-B, 
+	.c5-sidebar-big-1170-S-B-C,
+	.c5-sidebar-big-1170-B-C,
+	.c5-sidebar-big-1170-C-B,
+	.c5-sidebar-big-960-C-B, 
+	.c5-sidebar-big-960-B-C{
+		width: percentage( (@large_sidebar+@padding)/(994));
+	}
+	
+	
+	//breaking
+	.c5-breaking-1170-S-C,
+	.c5-breaking-960-S-C{
+		width: percentage( (994 - (@small_sidebar+@padding))/(994));
+	}
+	
+	.c5-breaking-1170-S-C-B,
+	.c5-breaking-1170-C,
+	.c5-breaking-960-C,
+	.c5-breaking-728-C,
+	.c5-breaking-1170-C-S, 
+	.c5-breaking-1170-C-B-S, 
+	.c5-breaking-1170-C-S-B,
+	.c5-breaking-1170-S-B-C,
+	.c5-breaking-1170-S-B-C,
+	.c5-breaking-1170-B-S-C,
+	.c5-breaking-1170-C-B,
+	.c5-breaking-960-C-B,
+	.c5-breaking-960-C-S,
+	.c5-breaking-1170-B-C,
+	.c5-breaking-1170-B-C-S,
+	.c5-breaking-960-B-C {
+		width: 100%;
+	}
+	
+}
+@media (max-width:768px){
+	.c5-main-1170-S-C-B,
+	.c5-main-1170-B-C-S, 
+	.c5-main-1170-B-S-C, 
+	.c5-main-1170-C-B-S, 
+	.c5-main-1170-C-S-B, 
+	.c5-main-1170-S-B-C,
+	.c5-main-1170-S-C,
+	.c5-main-1170-C-S,
+	.c5-main-1170-B-C,
+	.c5-main-1170-C-B,
+	.c5-main-960-C-B, 
+	.c5-main-960-B-C,
+	.c5-main-960-C-S, 
+	.c5-main-960-S-C{
+		width: 100%;
+	}
+	
+	.c5-sidebar-big-1170-S-C-B,
+	.c5-sidebar-big-1170-B-C-S, 
+	.c5-sidebar-big-1170-B-S-C, 
+	.c5-sidebar-big-1170-C-B-S, 
+	.c5-sidebar-big-1170-C-S-B, 
+	.c5-sidebar-big-1170-S-B-C,
+	.c5-sidebar-big-1170-B-C,
+	.c5-sidebar-big-1170-C-B,
+	.c5-sidebar-big-960-C-B, 
+	.c5-sidebar-big-960-B-C{
+		width: 330px;
+		position: absolute;
+		display: none;
+		right:-400px;
+	}
+	
+	.c5-sidebar-small-1170-S-C-B,
+	.c5-sidebar-small-1170-B-C-S, 
+	.c5-sidebar-small-1170-B-S-C, 
+	.c5-sidebar-small-1170-C-B-S, 
+	.c5-sidebar-small-1170-C-S-B, 
+	.c5-sidebar-small-1170-S-B-C,
+	.c5-sidebar-small-1170-S-C,
+	.c5-sidebar-small-1170-C-S,
+	.c5-sidebar-small-960-C-S, 
+	.c5-sidebar-small-960-S-C{
+		
+		width: 190px;
+		position: absolute;
+		display: none;
+		left:-200px;
+	}
+	
+	//breaking
+	.c5-breaking-1170-S-C,
+	.c5-breaking-960-S-C{
+		width: 100%;
+	}
+	
+	
+}
+

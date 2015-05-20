@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Shipment Tracking v1.3.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-04-07 10:54:08+0000\n"
+"Last-Translator: mlastra <mlastra@addsensor.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: shipment-tracking.php:214
+#@ wc_shipment_tracking
+msgid "Shipment Tracking"
+msgstr "Seguimiento de pedido"
+
+#: shipment-tracking.php:226
+#@ wc_shipment_tracking
+msgid "Provider:"
+msgstr "Proveedor:"
+
+#: shipment-tracking.php:228
+#@ wc_shipment_tracking
+msgid "Custom Provider"
+msgstr "Proveedor personalizado"
+
+#: shipment-tracking.php:253
+#@ wc_shipment_tracking
+msgid "Provider Name:"
+msgstr "Nombre del proveedor:"
+
+#: shipment-tracking.php:261
+#@ wc_shipment_tracking
+msgid "Tracking number:"
+msgstr "Numero de seguimiento"
+
+#: shipment-tracking.php:269
+#@ wc_shipment_tracking
+msgid "Tracking link:"
+msgstr "Link de seguimiento:"
+
+#: shipment-tracking.php:277
+#@ wc_shipment_tracking
+msgid "Date shipped:"
+msgstr "Fecha del envío:"
+
+#: shipment-tracking.php:285
+#@ wc_shipment_tracking
+msgid "Preview:"
+msgstr "Previsualizar:"
+
+#: shipment-tracking.php:285
+#: shipment-tracking.php:408
+#: shipment-tracking.php:410
+#: shipment-tracking.php:429
+#@ wc_shipment_tracking
+msgid "Click here to track your shipment"
+msgstr "Click aquí para ver el seguimiento del envío"
+
+#: shipment-tracking.php:386
+#, php-format
+#@ wc_shipment_tracking
+msgid "on %s"
+msgstr "el %s"
+
+#: shipment-tracking.php:386
+#@ wc_shipment_tracking
+msgid "l jS F Y"
+msgstr "j F, Y"
+
+#: shipment-tracking.php:414
+#: shipment-tracking.php:424
+#@ wc_shipment_tracking
+msgid "via"
+msgstr ""
+
+#: shipment-tracking.php:416
+#: shipment-tracking.php:436
+#, php-format
+#@ wc_shipment_tracking
+msgid "Your order was shipped%s%s. Tracking number %s. %s"
+msgstr "Tu pedido ha sido enviado%s%s. El número de seguimiento del envio es: %s. %s"
+
+#: shipment-tracking.php:488
+#@ wc_shipment_tracking
+msgid "Y-m-d"
+msgstr ""
+
