@@ -599,5 +599,19 @@ function wc_csv_export_rename_column( $column_headers ) {
 }
 add_filter( 'wc_customer_order_csv_export_order_headers', 'wc_csv_export_rename_column' );
 
+add_action('pre_get_posts','shop_filter_cat');
+
+ function shop_filter_cat($query) {
+    if (!is_admin() && is_post_type_archive( 'product' ) && $query->is_main_query()) {
+       $query->set('tax_query', array(
+                    array ('taxonomy' => 'product_cat',
+                                       'field' => 'slug',
+                                        'terms' => 'planes',
+										'operator'  => 'NOT IN'
+                                 )
+                     )
+       );   
+    }
+ }
 
 ?>
