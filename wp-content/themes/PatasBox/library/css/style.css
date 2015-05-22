@@ -1718,6 +1718,14 @@ h2.title-line {
             border-radius: 3px;
 }
 
+#catlist {list-style:none; clear:both}
+
+#catlist li { background-color:#D0D0D0; width:150px; height:150px; float:left; margin-right:30px; padding:40px}
+
+body.post-type-archive-product .c5-main-content-area {
+  width: 100%;
+}
+
 /* ==========================================================================
    20. Modal
 ========================================================================== */

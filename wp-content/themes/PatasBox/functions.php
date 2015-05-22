@@ -613,5 +613,8 @@ add_action('pre_get_posts','shop_filter_cat');
        );   
     }
  }
+ 
+ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
 ?>
