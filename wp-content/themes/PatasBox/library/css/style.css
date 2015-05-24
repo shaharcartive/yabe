@@ -1726,6 +1726,10 @@ body.post-type-archive-product .c5-main-content-area {
   width: 100%;
 }
 
+#favoritos ul {list-style:none}
+
+#favoritos li {float:left; margin-right:30px}
+
 /* ==========================================================================
    20. Modal
 ========================================================================== */

@@ -616,5 +616,9 @@ add_action('pre_get_posts','shop_filter_cat');
  
  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
  remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+ function wc_remove_related_products( $args ) {
+	return array();
+}
+add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
 
 ?>
