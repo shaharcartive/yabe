@@ -621,4 +621,17 @@ add_action('pre_get_posts','shop_filter_cat');
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
 
+add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+function woocommerce_category_image() {
+    if ( is_product_category() ){
+	    global $wp_query;
+	    $cat = $wp_query->get_queried_object();
+	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	    $image = wp_get_attachment_url( $thumbnail_id );
+	    if ( $image ) {
+		    echo '<img src="' . $image . '" alt="" />';
+		}
+	}
+}
+
 ?>
