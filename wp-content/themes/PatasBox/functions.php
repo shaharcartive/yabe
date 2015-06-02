@@ -634,4 +634,15 @@ function woocommerce_category_image() {
 	}
 }
 
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+
+function remove_loop_button(){
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+}
+add_action('init','remove_loop_button');
+ 
+ 
+
 ?>

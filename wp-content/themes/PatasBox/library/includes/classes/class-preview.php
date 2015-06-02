@@ -55,9 +55,9 @@ class C5_preview {
 		 </div>
 		 
 		 
-		 <input type="submit" name="c5-submit-preview" id="c5-submit-preview" value="See Changes" />
+		 <!--<input type="submit" name="c5-submit-preview" id="c5-submit-preview" value="See Changes" />
 		 </form>
-		 <span class="fa fa-cog"></span>
+		 <span class="fa fa-cog"></span>-->
 		 </div>
 		<?php
 	}

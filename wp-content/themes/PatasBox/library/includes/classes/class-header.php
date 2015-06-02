@@ -472,12 +472,12 @@ class C5_build_header {
                 global $post, $product;
                 $product = new WC_Product(get_the_ID()); 
                 $in_stock = $product->is_in_stock() ? 'InStock' : 'OutOfStock';
-                $small_text = '<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-            		 	<p class="price">' . $product->get_price_html() . '</p>
-            		 	<meta itemprop="price" content="' . $product->get_price() . '" />
-            		 	<meta itemprop="priceCurrency" content="' . get_woocommerce_currency() . '" />
-            		 	<link itemprop="availability" href="http://schema.org/' . $in_stock . '" />
-            		 </div>';
+             //   $small_text = '<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            	//	 	<p class="price">' . $product->get_price_html() . '</p>
+            	//	 	<meta itemprop="price" content="' . $product->get_price() . '" />
+            	//	 	<meta itemprop="priceCurrency" content="' . get_woocommerce_currency() . '" />
+            	//	 	<link itemprop="availability" href="http://schema.org/' . $in_stock . '" />
+            	//	 </div>';
             } else {
                 $small_text = $post_obj->get_meta_categories() . '<div class="clearfix"></div>';
             }
@@ -547,11 +547,11 @@ class C5_build_header {
         <div class="c5-main-header-wrap c5-content-<?php echo $color_mode; ?>">
             <div class="c5-inner-header-wrap">
 
-                <style  >
+                <!--<style  >
                     .c5-main-header-wrap{
-                        background-image: url('<?php echo esc_url($image_src) ?>');
+                        background-image: url('<?php // echo esc_url($image_src) ?>');
                     }
-                </style>
+                </style>-->
                 <?php
                 $width_class = 'c5-sidebar-hidden';
                 switch ($c5_skindata['page_width']) {

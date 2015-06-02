@@ -1745,6 +1745,68 @@ body.post-type-archive-product .c5-main-content-area {
 
 #favoritos li {float:left; margin-right:30px}
 
+body.tax-product_cat .count {display:none}
+
+#subcat h3 {color:#000; font-family: 'libel_suitregular'; font-size: 24px; text-align:center; text-transform:uppercase}
+
+body.single-product .wc-points-rewards-product-message {display:none}
+
+/** Social Button CSS **/
+
+#sharing_product {width:50%; float: left;   position: absolute;
+  top: 364px;
+  left: 105px;}
+  
+#sharing_product ul { list-style:none} 
+
+#sharing_product li { float:left; margin:0 5px} 
+
+.share-btn {
+    display: inline-block;
+    color: #53bc97;
+    border: 2px solid #53bc97;
+    padding: 0.5em;
+    width: 3em;
+	height:3em;
+	border-radius:3px;
+    outline: none;
+    text-align: center;
+}
+
+.share-btn:hover {
+  color: #eeeeee;
+}
+
+.share-btn:active {
+  position: relative;
+  top: 2px;
+  box-shadow: none;
+  color: #e2e2e2;
+  outline: none;
+}
+
+.share-btn.twitter     { background: #fff; }
+.share-btn.google-plus { background: #fff; }
+.share-btn.facebook    { background: #fff; }
+.share-btn.pinterest    { background: #fff; }
+.share-btn.email       { background: #fff; }
+
+.fa-facebook, .fa-google-plus, .fa-pinterest, .fa-twitter {
+  font-size: 27px !important;
+}
+
+body.woocommerce-page .c5-content-dark.c5-main-header-wrap, body.woocommerce-page .c5-content-light.c5-main-header-wrap {background-color:#e07c64}
+
+body.woocommerce-page #inner-content {
+  padding-top: 7px;
+}
+
+body.woocommerce-page .c5-content-dark, body.woocommerce-page .c5-inner-header-wrap {
+  background: none; 
+}
+
+.woocommerce-tabs {margin-top:100px}
+
 /* ==========================================================================
    20. Modal
 ========================================================================== */

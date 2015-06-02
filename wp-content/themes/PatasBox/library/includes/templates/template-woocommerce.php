@@ -3,26 +3,10 @@ global $c5_skindata;
 
 	?>
 <div id="main" class=" clearfix" role="main">
-
+<?php woocommerce_breadcrumb(); ?>
 	<div class="c5-main-width-wrap">
-    <?php if ( is_post_type_archive() ) : ?>
-    <h2 class="text-center title-line wow fadeInDown animated animated"> <span> Categorías </span> </h2>
-<ul id="catlist">
-<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes.png" /></li></a>
-<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene.png" /></li></a>
-<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios.png" /></li></a>
-<li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></li>
-</ul>
-<div style="clear:both"> &nbsp; </div>
-<h2 class="text-center title-line wow fadeInDown animated animated"> <span> CONSIGUE LOS FAVORITOS DE LA CAJA </span></h2>
-
-<?php endif ?>
-</div>
-
-    <?php woocommerce_content(); ?>
-	</div>
     
-    <div>
+     <div id="subcat">
     
     <?php  	
    $term = get_queried_object()->term_id;
@@ -32,7 +16,7 @@ global $c5_skindata;
  if($termid->parent > 0) { 
   /* Show siblings */
 } elseif (is_product_category()) {
-  echo "<h2> Categorías </h2>";
+  echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Categorías </span> </h2>";
 }
  
  ?>
@@ -51,6 +35,24 @@ global $c5_skindata;
        
     <?php endif ?>
     </div>
+    <?php if ( is_post_type_archive() ) : ?>
+    <h2 class="text-center title-line wow fadeInDown animated animated"> <span> Categorías </span> </h2>
+<ul id="catlist">
+<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes.png" /></li></a>
+<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene.png" /></li></a>
+<a href="../categoria-producto/comida-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios.png" /></li></a>
+<li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></li>
+</ul>
+<div style="clear:both"> &nbsp; </div>
+<h2 class="text-center title-line wow fadeInDown animated animated"> <span> CONSIGUE LOS FAVORITOS DE LA CAJA </span></h2>
+
+<?php endif ?>
+</div>
+
+    <?php woocommerce_content(); ?>
+	</div>
+    
+   
     
     <div id="favoritos">
    
