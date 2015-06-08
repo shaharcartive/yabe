@@ -41,7 +41,7 @@ class WC_Points_Rewards_Cart_Checkout {
 
 		add_action( 'woocommerce_before_cart', array( $this, 'render_earn_points_message' ), 15 );
 		add_action( 'woocommerce_before_cart', array( $this, 'render_redeem_points_message' ), 16 );
-		add_action( 'woocommerce_before_checkout_form', array( $this, 'render_earn_points_message' ), 5 );
+    	add_action( 'woocommerce_before_checkout_form', array( $this, 'render_earn_points_message' ), 5 );
 		add_action( 'woocommerce_before_checkout_form', array( $this, 'render_redeem_points_message' ), 6 );
 
 		// handle the apply discount submit on the cart page
@@ -178,7 +178,7 @@ class WC_Points_Rewards_Cart_Checkout {
 		global $wc_points_rewards;
 
 		// don't display a message if coupons are disabled or points have already been applied for a discount
-		if ( ! WC()->cart->coupons_enabled() || WC()->cart->has_discount( WC_Points_Rewards_Discount::get_discount_code() ) ) {
+		if ( WC()->cart->total<30 || ! WC()->cart->coupons_enabled() || WC()->cart->has_discount( WC_Points_Rewards_Discount::get_discount_code() ) ) {
 			return;
 		}
 
