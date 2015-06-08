@@ -6,6 +6,12 @@ jQuery(document).ready(function($) {
      it, so be sure to research and find the one
      that works for you best.
      */
+	 
+	
+	function restrictcoins() {
+		jQuery(".wc_points_rewards_earn_points").addClass("myClass yourClass" );
+		}
+
 
     /* getting viewport width */
     var responsive_viewport = $(window).width();
@@ -70,18 +76,36 @@ jQuery(document).ready(function($) {
 
     });
 
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
-    });
+    //$('a[href*=#]:not([href=#])').click(function() {
+//        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+//            var target = $(this.hash);
+//            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//            if (target.length) {
+//                $('html,body').animate({
+//                    scrollTop: target.offset().top
+//                }, 1000);
+//                return false;
+//            }
+//        }
+//    });
+
+
+$(document).ready(function(){
+	$("#open").click(function(){
+		$('#overlay, #review_form_wrapper').animate({'opacity':'0.7'}, 300, 'linear');
+     	$('#review_form_wrapper').animate({'opacity':'1.00'},300,'linear');
+     	$('#overlay, #review_form_wrapper').css('display','block');
+     	$('#review_form_wrapper').css({'left':(($(document).width()/2)-($('#review_form_wrapper').width()/2))});
+     	$('#review_form_wrapper').css({'top':0});
+  	});
+	
+	$('#close').click(function(){
+		$('#overlay, #review_form_wrapper').animate({'opacity':'0'}, 300, 'linear', function(){
+     	$('#overlay, #review_form_wrapper').css('display','none');
+		});
+	});
+});
+
 
     var c5_reading_scroll = function() {
         if ($('.c5-article-content').length === 0) {

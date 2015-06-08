@@ -569,7 +569,7 @@ class C5_build_header {
                 <div class="c5-dark-shadow c5-content-<?php echo $color_mode; ?>" >
 
                     <div class="c5-header-data wow fadeInDown">
-                        <h1><?php echo $icon; ?><?php echo $title; ?></h1>
+                        <!--<h1><?php // echo $icon; ?><?php // echo $title; ?></h1>-->
                         <?php if ($subtitle != '') { ?>
                         	<div class="logo-marca">
                         		<?php echo get_brand_thumbnail_url( $brand_id );?>

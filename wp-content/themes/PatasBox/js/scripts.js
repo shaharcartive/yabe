@@ -27,5 +27,5 @@ jQuery(document).ready(function () {
         callback: mailchimpCallback,
         url: 'http://wew'
     });
-
+	
 });

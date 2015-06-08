@@ -1737,27 +1737,51 @@ h2.title-line {
     opacity:0;
 }
 
-body.post-type-archive-product .c5-main-content-area {
-  width: 100%;
+body.post-type-archive-product .c5-main-content-area, body.tax-product_cat .c5-main-content-area, body.single-product .c5-main-content-area {
+  width: 100%;   padding: 0px 0;
 }
 
-#favoritos ul {list-style:none}
-
-#favoritos li {float:left; margin-right:30px}
-
 body.tax-product_cat .count {display:none}
+
+
 
 #subcat h3 {color:#000; font-family: 'libel_suitregular'; font-size: 24px; text-align:center; text-transform:uppercase}
 
 body.single-product .wc-points-rewards-product-message {display:none}
 
+body.single-product .entry-summary .points {display:none}
+
 /** Social Button CSS **/
 
-#sharing_product {width:50%; float: left;   position: absolute;
-  top: 364px;
-  left: 105px;}
+.yith-wcwl-add-to-wishlist {
+  margin-top: 0px;
+  float: left;
+}
+
+a.add_to_wishlist.button.alt { text-indent: 100%; 
+white-space: nowrap; 
+overflow: hidden; width: 128px;
+height: 45px;
+background: url(images/shop_wishlist.png);
+border-radius:0 ;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+
+}
+
+a.add_to_wishlist.button.alt:hover { 
+background: url(images/shop_wishlist_hover.png);
+}
+
+.yith-wcwl-wishlistaddedbrowse a {color:#000}
+
+#sharing_product .clear {clear:none}
+
+#sharing_product {width:535px; float: left;   position: absolute;
+  top: 552px;
+  left: 159px;}
   
-#sharing_product ul { list-style:none} 
+#sharing_product ul { list-style:none; float:right} 
 
 #sharing_product li { float:left; margin:0 5px} 
 
@@ -1771,10 +1795,12 @@ body.single-product .wc-points-rewards-product-message {display:none}
 	border-radius:3px;
     outline: none;
     text-align: center;
+	background: #fff;
 }
 
 .share-btn:hover {
-  color: #eeeeee;
+  color: #fff;
+  background-color:#53bc97
 }
 
 .share-btn:active {
@@ -1785,17 +1811,13 @@ body.single-product .wc-points-rewards-product-message {display:none}
   outline: none;
 }
 
-.share-btn.twitter     { background: #fff; }
-.share-btn.google-plus { background: #fff; }
-.share-btn.facebook    { background: #fff; }
-.share-btn.pinterest    { background: #fff; }
-.share-btn.email       { background: #fff; }
+
 
 .fa-facebook, .fa-google-plus, .fa-pinterest, .fa-twitter {
   font-size: 27px !important;
 }
 
-body.woocommerce-page .c5-content-dark.c5-main-header-wrap, body.woocommerce-page .c5-content-light.c5-main-header-wrap {background-color:#e07c64}
+body.woocommerce-page .c5-content-dark.c5-main-header-wrap, body.woocommerce-page .c5-content-light.c5-main-header-wrap {background-color:#e07c64;   height: 20px;}
 
 body.woocommerce-page #inner-content {
   padding-top: 7px;
@@ -1805,8 +1827,244 @@ body.woocommerce-page .c5-content-dark, body.woocommerce-page .c5-inner-header-w
   background: none; 
 }
 
-.woocommerce-tabs {margin-top:100px}
+.woocommerce-tabs {margin-top:100px;   min-height: 335px;}
 
+.woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 {
+	text-align:center;
+	padding: 0px 0 3px !important;
+}
+
+.woocommerce ul.products li.product .c5-product-content, .woocommerce-page ul.products li.product .c5-product-content {
+  border: none !important;
+}
+
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
+	text-align:center;
+	color:#000 !important;
+	font-size:18px;
+}
+
+.woocommerce ul.products li.product .c5-product-buttons, .woocommerce-page ul.products li.product .c5-product-buttons {
+  border-top: none !important;
+}
+
+
+#subcat .product-category {max-width:185px}
+
+.woocommerce div.product div.images {border: 2px dashed #53bc97; padding:0 0 !important }
+
+body.single-product .row {
+    margin: 0 auto;
+}
+
+body.single-product div.type-product .row { max-width:1070px }
+
+body.single-product div.product {margin-top:40px;}
+
+.woocommerce-page div.product div.summary { padding:0 40px !important;}
+
+body.single-product .entry-summary h3, body.single-product .woocommerce-tabs h3 {font-family: 'libel_suitregular',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size:50px;
+  text-align:center;
+  color:#000;
+  margin-bottom: 0;}
+  
+body.single-product .woocommerce-tabs .panel {
+	background-color:transparent;
+}  
+
+body.single-product .woocommerce-tabs .entry-content {min-height:0; padding: 10px 0px 0px !important;   margin: 0 0 0 !important;}
+  
+body.single-product .woocommerce-tabs h3 {float:left; width:30%}  
+
+body.single-product .woocommerce-tabs .tabs {}  
+
+#tabs_wrapper {border: 2px dashed #fff; padding:10px 30px; background-color:#e4d8ca ; float:left; width:70% }
+  
+  .woocommerce .woocommerce-product-rating .star-rating, .woocommerce-page .woocommerce-product-rating .star-rating {color:#000 !important}
+  
+  .woocommerce-page .woocommerce-product-rating {margin-left:169px}
+  
+  .woocommerce .c5-shop-hr, .woocommerce-page .c5-shop-hr {
+   border-top: none !important; 
+   border-bottom: none !important; 
+}
+
+.shopdesc { font-family: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px; }
+  
+body.single-product  .amount, body.single-product p.price { font-family: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px !important; color:#000 !important; font-weight:bold }
+  
+body.single-product p.price {text-align:center}
+
+body.single-product div.product form.cart .button {font-family: 'libel_suitregular',"Helvetica Neue",Helvetica,Arial,sans-serif; background-color:#53bc97; color:#fff; font-size:24px !important; text-transform:uppercase; float:none !important }
+
+body.single-product div.product form.cart .button:hover {background-color:#fff; color:#53bc97; border:2px solid #53bc97;   padding: 8px 18px; border-bottom: 2px solid #53bc97 !important;}
+
+.woocommerce-page div.product form.cart div.quantity {float:none !important}
+
+.woocommerce-page div.product form.cart {text-align:center}
+
+.attachment-shop_singleattachment-shop_single {padding:50px}
+
+body.single-product div.product form.cart div.quantity { text-align: center;
+  width: 150px;
+  margin: 0 auto 20px; }
+  
+body.single-product  .quantity input.qty {
+  width: 150px;
+  height: 44px;
+  border: 2px solid #53bc97;
+  border-radius:3px;
+  font-size:24px;
+  background:url(images/cantidad.png) no-repeat 3px 3px #FFF;
+  padding-left: 10px;
+}
+
+body.single-product .posted_in {display:none}
+
+.summary .product_meta {
+   margin-top: 0 !important; 
+   font-family: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+}
+
+body.single-product #inner-content .c5-main-width-wrap {
+  max-width:none !important;
+}
+
+.woocommerce-breadcrumb {
+  max-width: 1070px;
+  margin: 0 auto !important;
+}
+
+body.single-product div.product .woocommerce-tabs ul.tabs li.active { border-color:transparent; background-color:#53bc97}
+
+body.single-product div.product .woocommerce-tabs ul.tabs li.active a, body.single-product div.product .woocommerce-tabs ul.tabs li.active a:hover, body.single-product div.product .woocommerce-tabs ul.tabs li.active:hover a {color:#fff}
+
+body.single-product div.product .woocommerce-tabs ul.tabs li a {color:#fff; font-family: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; text-transform:uppercase}
+  
+body.single-product div.product .woocommerce-tabs ul.tabs {border-bottom:2px solid #53bc97}
+
+body.single-product div.product .woocommerce-tabs ul.tabs li:hover a {color:#53bc97}
+
+body.single-product .entry-content table tr, body.single-product table.shop_attributes th, body.single-product table.shop_attributes td {
+  border-bottom:none !important;
+}
+
+body.single-product table.shop_attributes .alt td, body.single-product table.shop_attributes .alt th, body.single-product table.shop_attributes .alt td, body.single-product table.shop_attributes .alt th {
+  background: none;   vertical-align: top;
+}
+
+body.single-product table.shop_attributes {
+  border-top: none;
+  margin-bottom: 1.618em;
+}
+
+body.single-product .entry-content table td, body.single-product .entry-content table th {
+  border-right: none; vertical-align: top;  padding: 5px 8px;
+}
+
+body.single-product table.shop_attributes td {
+  font-style:normal; padding: 5px 8px; }
+  
+body.single-product  table.shop_attributes td p {
+  margin: 0;
+  padding: 0px 0;
+}
+
+body.single-product .entry-content table {
+	color:#494848;
+ font-family: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+body.single-product .panel {
+	color:#494848;
+ font-family: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#overlay {
+opacity: 0;
+background-color: #fff;
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 50;
+width: 100%;
+height: 100%;
+display:none;
+}
+ 
+#review_form_wrapper {
+margin:auto;
+padding:20px;
+width: 100%;
+max-width:800px;
+border: 2px dashed #fff;
+  padding: 10px 30px;
+  background-color: #e4d8ca;
+box-shadow: 0 4px 16px #999;
+z-index: 51;
+position:absolute;
+display:none;
+max-height: 335px;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text, .woocommerce-page #reviews #comments ol.commentlist li .comment-text {
+  margin: 0 0 0 0 !important; padding-bottom: 10px !important;}
+  
+.woocommerce #reviews #comments ol.commentlist {padding-left:0 !important}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text p, .woocommerce-page #reviews #comments ol.commentlist li .comment-text p {
+  margin: 0 0 0 !important;
+}
+
+body.single-product #open {font-family: 'libel_suitregular',"Helvetica Neue",Helvetica,Arial,sans-serif; background-color:#53bc97; color:#fff; font-size:24px !important; text-transform:uppercase; float:none !important;   padding: 10px; border-radius:3px}
+
+.woocommerce #reviews #comments ol.commentlist li, .woocommerce-page #reviews #comments ol.commentlist li {
+  margin: 0 0 12px !important;
+}
+
+.woocommerce-page #reviews h3 {
+  margin: 0;
+    width: 100%;
+}
+
+body.single-product .comment-form textarea {
+  min-height:100px;
+}
+
+body.single-product .comment-form #submit { background-color:#53bc97 !important;}
+
+#closecomment {position:absolute; top:5px; right:5px; font-size:24px}
+
+#favoritos {
+  max-width: 1070px;
+  margin: 50px auto;
+}
+
+.yith_magnifier_zoom_magnifier {
+	border:0 !important;
+}
+
+.tagged_as {font-size:28px !important;}
+
+h2.tag {margin-bottom:0 !important;   margin-top: 0 !important;}
+
+.c5-meta-product-content a:hover span.amount, .c5-meta-product-content a:hover span.amount:after {
+  background-color: #53bc97;
+  padding: 4px 6px;
+  border-radius: 3px;
+  color:#fff;
+}
+  
 /* ==========================================================================
    20. Modal
 ========================================================================== */

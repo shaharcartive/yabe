@@ -58,7 +58,7 @@ if( c5_wc_in_cart(get_the_ID()) ) {
 	</a>
 	<div class="c5-meta-product-content">
 	<a href="<?php the_permalink(); ?>">
-		<h3><?php the_title(); ?></h3>
+		<h3><?php echo str_replace(' | ', '<br />', get_the_title()); ?></h3>
 
 		<?php
 			/**

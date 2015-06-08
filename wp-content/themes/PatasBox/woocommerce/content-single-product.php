@@ -45,13 +45,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <ul>
 <li>
-<a href="http://twitter.com/share?url=<URL>&text=<TEXT>&via=<VIA>" target="_blank" class="share-btn twitter">
+<a href="http://twitter.com/share?url=<?php echo get_permalink() ?>&text=<?php echo str_replace(' | ', '', get_the_title()); ?>&via=patasbox" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
 </a>
 </li>
 <li>
 <!-- Google Plus -->
-<a href="https://plus.google.com/share?url=<BTN>" target="_blank" class="share-btn google-plus">
+<a href="https://plus.google.com/share?url=<?php echo get_permalink() ?>" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
 </a>
 </li>
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 </a>
 </li>
 <li>
-<a href="https://www.pinterest.com/pin/create/button/?url=" target="_blank" class="share-btn pinterest">
+<a href="https://www.pinterest.com/pin/create/button/?url=<?php echo get_permalink() ?>" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest"></i>
 </a>
 </li>
@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 </div>
 <?php endif ?>
 	<div class="summary entry-summary">
-    
+    <h3><?php echo str_replace(' | ', '<br />', get_the_title()); ?></h3>
 
 		<?php
 			/**

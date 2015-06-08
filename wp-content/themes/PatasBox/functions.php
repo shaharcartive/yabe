@@ -621,28 +621,115 @@ add_action('pre_get_posts','shop_filter_cat');
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
 
-add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
-function woocommerce_category_image() {
-    if ( is_product_category() ){
-	    global $wp_query;
-	    $cat = $wp_query->get_queried_object();
-	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-	    $image = wp_get_attachment_url( $thumbnail_id );
-	    if ( $image ) {
-		    echo '<img src="' . $image . '" alt="" />';
-		}
-	}
-}
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 24 );
 
 function remove_loop_button(){
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 }
 add_action('init','remove_loop_button');
  
+ add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
  
+ function wc_sell_only_states( $states ) {
+	$states['ES'] = array(
+	'C'  => __( 'A Coru&ntilde;a', 'woocommerce' ),
+	'VI' => __( 'Araba/&Aacute;lava', 'woocommerce' ),
+	'AB' => __( 'Albacete', 'woocommerce' ),
+	'A'  => __( 'Alicante', 'woocommerce' ),
+	'AL' => __( 'Almer&iacute;a', 'woocommerce' ),
+	'O'  => __( 'Asturias', 'woocommerce' ),
+	'AV' => __( '&Aacute;vila', 'woocommerce' ),
+	'BA' => __( 'Badajoz', 'woocommerce' ),
+	'PM' => __( 'Baleares', 'woocommerce' ),
+	'B'  => __( 'Barcelona', 'woocommerce' ),
+	'BU' => __( 'Burgos', 'woocommerce' ),
+	'CC' => __( 'C&aacute;ceres', 'woocommerce' ),
+	'CA' => __( 'C&aacute;diz', 'woocommerce' ),
+	'S'  => __( 'Cantabria', 'woocommerce' ),
+	'CS' => __( 'Castell&oacute;n', 'woocommerce' ),
+	//'CE' => __( 'Ceuta', 'woocommerce' ),
+	'CR' => __( 'Ciudad Real', 'woocommerce' ),
+	'CO' => __( 'C&oacute;rdoba', 'woocommerce' ),
+	'CU' => __( 'Cuenca', 'woocommerce' ),
+	'GI' => __( 'Girona', 'woocommerce' ),
+	'GR' => __( 'Granada', 'woocommerce' ),
+	'GU' => __( 'Guadalajara', 'woocommerce' ),
+	'SS' => __( 'Gipuzkoa', 'woocommerce' ),
+	'H'  => __( 'Huelva', 'woocommerce' ),
+	'HU' => __( 'Huesca', 'woocommerce' ),
+	'J'  => __( 'Ja&eacute;n', 'woocommerce' ),
+	'LO' => __( 'La Rioja', 'woocommerce' ),
+	//'GC' => __( 'Las Palmas', 'woocommerce' ),
+	'LE' => __( 'Le&oacute;n', 'woocommerce' ),
+	'L'  => __( 'Lleida', 'woocommerce' ),
+	'LU' => __( 'Lugo', 'woocommerce' ),
+	'M'  => __( 'Madrid', 'woocommerce' ),
+	'MA' => __( 'M&aacute;laga', 'woocommerce' ),
+	//'ML' => __( 'Melilla', 'woocommerce' ),
+	'MU' => __( 'Murcia', 'woocommerce' ),
+	'NA' => __( 'Navarra', 'woocommerce' ),
+	'OR' => __( 'Ourense', 'woocommerce' ),
+	'P'  => __( 'Palencia', 'woocommerce' ),
+	'PO' => __( 'Pontevedra', 'woocommerce' ),
+	'SA' => __( 'Salamanca', 'woocommerce' ),
+	//'TF' => __( 'Santa Cruz de Tenerife', 'woocommerce' ),
+	'SG' => __( 'Segovia', 'woocommerce' ),
+	'SE' => __( 'Sevilla', 'woocommerce' ),
+	'SO' => __( 'Soria', 'woocommerce' ),
+	'T'  => __( 'Tarragona', 'woocommerce' ),
+	'TE' => __( 'Teruel', 'woocommerce' ),
+	'TO' => __( 'Toledo', 'woocommerce' ),
+	'V'  => __( 'Valencia', 'woocommerce' ),
+	'VA' => __( 'Valladolid', 'woocommerce' ),
+	'BI' => __( 'Bizkaia', 'woocommerce' ),
+	'ZA' => __( 'Zamora', 'woocommerce' ),
+	'Z'  => __( 'Zaragoza', 'woocommerce' )
+	);
+
+	return $states;
+}
+add_filter( 'woocommerce_states', 'wc_sell_only_states' );
+
+
+
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
+add_action( 'woocommerce_checkout_process', 'wc_minimum_order_amount' );
+add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
+ 
+function wc_minimum_order_amount() {
+    // Set this variable to specify a minimum order value
+    $minimum = 30;
+
+    if ( WC()->cart->total < $minimum ) {
+
+        if( is_cart() ) {
+apply_filters ( 'wc_points_rewards_redeem_points_message', 'hello', $discount_available );
+
+			
+
+        } else {
+
+            wc_add_notice( 
+                sprintf( 'You must have an order with a minimum of %s to place your order, your current order total is %s.' , 
+                    wc_price( $minimum ), 
+                    wc_price( WC()->cart->total )
+                ), 'error' 
+            );
+
+        }
+    }
+
+}
+
+
+
 
 ?>
