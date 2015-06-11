@@ -176,6 +176,8 @@ class WC_Points_Rewards_Cart_Checkout {
 	 */
 	public function render_redeem_points_message() {
 		global $wc_points_rewards;
+		//$points_balance = WC_Points_Rewards_Manager::get_users_points( get_current_user_id() );
+	//	$points_balance<60 ||
 
 		// don't display a message if coupons are disabled or points have already been applied for a discount
 		if ( WC()->cart->total<30 || ! WC()->cart->coupons_enabled() || WC()->cart->has_discount( WC_Points_Rewards_Discount::get_discount_code() ) ) {
