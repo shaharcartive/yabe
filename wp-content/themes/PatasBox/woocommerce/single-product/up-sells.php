@@ -33,10 +33,12 @@ $products = new WP_Query( $args );
 $woocommerce_loop['columns'] = $columns;
 
 if ( $products->have_posts() ) : ?>
+<div id="favoritos">
+    <h2 class='text-center title-line wow fadeInDown animated animated'> <span><?php _e( 'You may also like&hellip;', 'woocommerce' ) ?></span></h2>
 
 	<div class="upsells products">
 
-		<h2><?php _e( 'You may also like&hellip;', 'woocommerce' ) ?></h2>
+		 
 
 		<?php woocommerce_product_loop_start(); ?>
 
@@ -49,7 +51,7 @@ if ( $products->have_posts() ) : ?>
 		<?php woocommerce_product_loop_end(); ?>
 
 	</div>
-
+</div>
 <?php endif;
 
 wp_reset_postdata();

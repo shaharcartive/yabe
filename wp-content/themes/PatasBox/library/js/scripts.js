@@ -7,10 +7,6 @@ jQuery(document).ready(function($) {
      that works for you best.
      */
 	 
-	
-	function restrictcoins() {
-		jQuery(".wc_points_rewards_earn_points").addClass("myClass yourClass" );
-		}
 
 
     /* getting viewport width */
@@ -95,7 +91,7 @@ $(document).ready(function(){
 		$('#overlay, #review_form_wrapper').animate({'opacity':'0.7'}, 300, 'linear');
      	$('#review_form_wrapper').animate({'opacity':'1.00'},300,'linear');
      	$('#overlay, #review_form_wrapper').css('display','block');
-     	$('#review_form_wrapper').css({'left':(($(document).width()/2)-($('#review_form_wrapper').width()/2))});
+     	$('#review_form_wrapper').css({'right':(($(document).width()/2)-($('#review_form_wrapper').width()/2))});
      	$('#review_form_wrapper').css({'top':0});
   	});
 	
@@ -105,6 +101,8 @@ $(document).ready(function(){
 		});
 	});
 });
+
+
 
 
     var c5_reading_scroll = function() {

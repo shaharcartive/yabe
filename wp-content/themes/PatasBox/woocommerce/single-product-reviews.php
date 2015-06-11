@@ -15,7 +15,7 @@ if ( ! comments_open() )
 	return;
 ?>
 
-<div id="overlay"></div>
+ 
 <div id="reviews">
 	<div id="comments">
 		
@@ -42,14 +42,14 @@ if ( ! comments_open() )
 
 		<?php endif; ?>
 	
-    <a href="#metaid" id="open">Añadir un comentario</a>
+    <a id="open">Añadir un comentario</a>
     </div>
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->id ) ) : ?>
 
 		<div id="review_form_wrapper">
 			<div id="review_form">
-            <p id="closecomment"><a href="#metaid" id="close">X</a></p>
+            <p id="closecomment"><a id="close">X</a></p>
 				<?php
 					$commenter = wp_get_current_commenter();
 

@@ -2,9 +2,11 @@
 global $c5_skindata;
 
 	?>
+ <div id="overlay"></div>
 <div id="main" class=" clearfix" role="main">
-<?php woocommerce_breadcrumb(); ?>
+
 	<div class="c5-main-width-wrap">
+    <?php woocommerce_breadcrumb(); ?>
     
      <div id="subcat">
     
@@ -42,7 +44,7 @@ global $c5_skindata;
 <a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes.png" /></li></a>
 <a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene.png" /></li></a>
 <a href="../categoria-producto/comida-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios.png" /></li></a>
-<li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></li>
+<li><a href="http://htcvr.es/sandbox/tienda/uncategorized/caja-regalo/"><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></a></li>
 </ul>
 <div style="clear:both"> &nbsp; </div>
 <h2 class="text-center title-line wow fadeInDown animated animated"> <span> CONSIGUE LOS FAVORITOS DE LA CAJA </span></h2>
