@@ -701,32 +701,27 @@ add_filter( 'woocommerce_states', 'wc_sell_only_states' );
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
-add_action( 'woocommerce_checkout_process', 'wc_minimum_order_amount' );
-add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
+add_filter('gettext',  'translate_text');
+add_filter('ngettext',  'translate_text');
  
-function wc_minimum_order_amount() {
-    // Set this variable to specify a minimum order value
-    $minimum = 30;
+function translate_text($translated) {
+     $translated = str_ireplace('A subscription has been removed from your cart. Products and subscriptions can not be purchased at the same time',  'Una modalidad de suscripción ha sido retirada de tu carrito. Los productos de la tienda y las suscripciones no se pueden comprar a la vez',  $translated);
+     return $translated;
+}
+ 
+function category_has_children( $term_id = 0, $post_type = 'product', $taxonomy = 'product_cat' ) {
+    $children = get_categories( array( 'child_of' => $term_id, 'type' => $post_type, 'taxonomy' => $taxonomy ) );
+    return ( $children );
+}
 
-    if ( WC()->cart->total < $minimum ) {
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_product_loop_tags', 5 );
 
-        if( is_cart() ) {
-apply_filters ( 'wc_points_rewards_redeem_points_message', 'hello', $discount_available );
+function woocommerce_product_loop_tags() {
+    global $post, $product;
 
-			
+    $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
-        } else {
-
-            wc_add_notice( 
-                sprintf( 'You must have an order with a minimum of %s to place your order, your current order total is %s.' , 
-                    wc_price( $minimum ), 
-                    wc_price( WC()->cart->total )
-                ), 'error' 
-            );
-
-        }
-    }
-
+    echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( '', '', $tag_count, 'woocommerce' ) . ' ', '</span>' );
 }
 
 

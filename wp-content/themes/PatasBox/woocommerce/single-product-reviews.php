@@ -50,6 +50,8 @@ if ( ! comments_open() )
 		<div id="review_form_wrapper">
 			<div id="review_form">
             <p id="closecomment"><a id="close">X</a></p>
+            
+            
 				<?php
 					$commenter = wp_get_current_commenter();
 

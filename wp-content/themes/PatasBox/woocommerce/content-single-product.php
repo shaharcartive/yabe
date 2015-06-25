@@ -38,7 +38,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
     
- <?php   if (  is_product() ) : ?>
+ 
+	<div class="summary entry-summary">
+    <h3><?php echo str_replace(' | ', '<br />', get_the_title()); ?></h3>
+
+		<?php
+			/**
+			 * woocommerce_single_product_summary hook
+			 *
+			 * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_rating - 10
+			 * @hooked woocommerce_template_single_price - 10
+			 * @hooked woocommerce_template_single_excerpt - 20
+			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_meta - 40
+			 * @hooked woocommerce_template_single_sharing - 50
+			 */
+			do_action( 'woocommerce_single_product_summary' );
+		?>
+
+	</div><!-- .summary -->
+    <?php   if (  is_product() ) : ?>
         <div id="sharing_product">
 <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );	?>
 
@@ -69,25 +89,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 </ul>
 </div>
 <?php endif ?>
-	<div class="summary entry-summary">
-    <h3><?php echo str_replace(' | ', '<br />', get_the_title()); ?></h3>
-
-		<?php
-			/**
-			 * woocommerce_single_product_summary hook
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
-
-	</div><!-- .summary -->
 	</div>
 	<?php
 		/**

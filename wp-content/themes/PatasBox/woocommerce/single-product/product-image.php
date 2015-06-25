@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product;
 
 ?>
-mmm<div class="images">
+<div class="images">
 
 	<!-- Place somewhere in the <body> of your page -->
 	<div id="woo_slider" class="flexslider">

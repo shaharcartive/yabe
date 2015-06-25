@@ -547,6 +547,15 @@ class WC_Points_Rewards_Admin {
 				'default'  => '',
 				'type'     => 'text',
 			),
+			
+			// clusters
+			array(
+				'title'    => __( 'Cluster', 'woocommerce-points-and-rewards' ),
+				'desc_tip' => __( 'Set the cluster.', 'woocommerce-points-and-rewards' ),
+				'id'       => 'wc_points_rewards_cluster',
+				'default'  => '',
+				'type'     => 'text',
+			),
 
 			// points label
 			array(

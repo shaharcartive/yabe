@@ -2,6 +2,27 @@
 global $c5_skindata;
 
 	?>
+    <?php if ( is_post_type_archive() ) : ?>
+    <!--<div class="c5-main-header-wrap c5-content-dark">
+            <div class="c5-inner-header-wrap">
+
+               
+                <div class="c5-main-width-wrap c5-main-page-wrap-sidebar c5-sidebar-active c5-page-right clearfix"><div class="c5-main-header-ad clearfix"></div><div class="row"><div class="c5-middle-control clearfix"><div class="c5-main-content-area c5-single-content clearfix">                <div class="c5-dark-shadow c5-content-dark">
+
+                    <div class="c5-header-data wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown; -webkit-animation-name: fadeInDown;">
+                       
+                                                	
+                            <p class="description">Hola! Bienvenidos a nuestra tienda</p>	
+                                                
+                        								
+							                                                             
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div></div></div>
+        </div>-->
+           <?php endif ?>
  <div id="overlay"></div>
 <div id="main" class=" clearfix" role="main">
 
@@ -13,13 +34,30 @@ global $c5_skindata;
     <?php  	
    $term = get_queried_object()->term_id;
    $termid = get_term($term, 'product_cat' );
+   global $wp_query;
+$term = $wp_query->get_queried_object();
+
+   $children = get_terms( $term->taxonomy, array(
+'parent'    => $term->term_id,
+'hide_empty' => false
+) );
+ // print_r($children); // uncomment to examine for debugging
+
  
  
  if($termid->parent > 0) { 
-  /* Show siblings */
-} elseif (is_product_category()) {
-  echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Categorías </span> </h2>";
+
+} 
+elseif (($children) && is_product_category()) { echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Categorías </span> </h2>";
 }
+elseif (is_product_category()) {
+  echo "";
+ 
+}
+
+elseif ( is_post_type_archive() ) { echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Categorías </span> </h2>"; }
+
+
  
  ?>
     
@@ -39,13 +77,15 @@ global $c5_skindata;
     <?php endif ?>
     </div>
     <?php if ( is_post_type_archive() ) : ?>
-    <h2 class="text-center title-line wow fadeInDown animated animated"> <span> Categorías </span> </h2>
+     <div id="subcat">
+   
 <ul id="catlist">
-<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes.png" /></li></a>
-<a href="../categoria-producto/alimentacion-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene.png" /></li></a>
-<a href="../categoria-producto/comida-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios.png" /></li></a>
-<li><a href="http://htcvr.es/sandbox/tienda/uncategorized/caja-regalo/"><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></a></li>
+<a href="../la-tienda/juguetes/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes.png" /></li></a>
+<a href="../la-tienda/complementos-e-higiene/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene.png" /></li></a>
+<a href="../la-tienda/comida-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios.png" /></li></a>
+<a href="../la-tienda/caja-regalo/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></li></a>
 </ul>
+</div>
 <div style="clear:both"> &nbsp; </div>
 <h2 class="text-center title-line wow fadeInDown animated animated"> <span> CONSIGUE LOS FAVORITOS DE LA CAJA </span></h2>
 

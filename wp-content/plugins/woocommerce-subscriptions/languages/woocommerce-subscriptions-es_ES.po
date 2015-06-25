@@ -3544,7 +3544,7 @@ msgstr ""
 #: woocommerce-subscriptions.php:303
 #@ woocommerce-subscriptions
 msgid "A subscription has been removed from your cart. Different subscription products can not be purchased at the same time."
-msgstr ""
+msgstr "Una modalidad de suscripción ha sido retirada de tu carrito. Los productos de la tienda y las suscripciones no se pueden comprar a la vez"
 
 #: woocommerce-subscriptions.php:309
 #@ woocommerce-subscriptions

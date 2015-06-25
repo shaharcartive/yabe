@@ -39,6 +39,9 @@ class C5_build_header {
           <ul class="c5-main-width-wrap clearfix">
 			  <li class="texto-cabecera"><?php the_field('texto_fecha_de_suscripcion_cabecera');?></li>
               <li class="mi-cuenta">
+                <a href="http://htcvr.es/sandbox/wishlist/view/"><span class="c5ab-single-icon-SRoiJ c5ab-single-icon-TFvfS fa fa-heart"></span> Wishlist</a>
+              </li>
+              <li class="mi-cuenta">
                 <a href="http://htcvr.es/sandbox/mi-cuenta/"><span class="c5ab-single-icon-SRoiJ c5ab-single-icon-TFvfS fa fa-user"></span> Mi cuenta</a>
               </li>
 
@@ -60,7 +63,7 @@ class C5_build_header {
                         if (is_single()) {
                             echo '<h3>' . get_the_title() . '<span class="c5-hide-rest"></span></h3>';
 
-                            echo '<div class="c5-header-like-button"><div class="fb-like" data-href="' . get_permalink() . '" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>';
+                          //  echo '<div class="c5-header-like-button"><div class="fb-like" data-href="' . get_permalink() . '" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>';
                         }
                         ?>
                     </div>
@@ -68,7 +71,7 @@ class C5_build_header {
                         <?php
                         echo(do_shortcode('[c5ab_menu location="' . $c5_headerdata['header_menu'] . '" responsive="on" style="default" bg_mode="light" ]'));
                         if ($c5_skindata['page_width'] != 'full') {
-                            echo '<span class="fa fa-align-justify c5-sidebar-handle" ></span>';
+                         //   echo '<span class="fa fa-align-justify c5-sidebar-handle" ></span>';
                         }
                         ?>
                     </div>
@@ -82,7 +85,7 @@ class C5_build_header {
 								wp_nav_menu( $args ); 
 							
 	                        	if ($search_on != 'off') {
-	                            	echo '<span class="fa fa-search c5-search-handle"></span>';
+	                            //	echo '<span class="fa fa-search c5-search-handle"></span>';
 	                        	}
 	                        ?>
 						</nav>
@@ -125,6 +128,9 @@ class C5_build_header {
 			<div class="mi-cuenta-cart">
               <ul class="c5-main-width-wrap clearfix">
 				  <li class="texto-cabecera"><?php the_field('texto_fecha_de_suscripcion_cabecera');?></li>
+                  <li class="mi-cuenta">
+                <a href="http://htcvr.es/sandbox/wishlist/view/"><span class="c5ab-single-icon-SRoiJ c5ab-single-icon-TFvfS fa fa-heart"></span> Wishlist</a>
+              </li>
 	              <li class="mi-cuenta">
 	                <a href="http://htcvr.es/sandbox/mi-cuenta/"><span class="c5ab-single-icon-SRoiJ c5ab-single-icon-TFvfS fa fa-user"></span> Mi cuenta</a>
 	              </li>
@@ -146,7 +152,7 @@ class C5_build_header {
                         <?php
                         echo(do_shortcode('[c5ab_menu location="' . $c5_headerdata['header_menu'] . '" responsive="on" style="default" bg_mode="light" ]'));
                         if ($c5_skindata['page_width'] != 'full') {
-                            echo '<span class="fa fa-align-justify c5-sidebar-handle" ></span>';
+                          //  echo '<span class="fa fa-align-justify c5-sidebar-handle" ></span>';
                         }
                         ?>
                     </div>
@@ -160,7 +166,7 @@ class C5_build_header {
 								wp_nav_menu( $args ); 
 							
 	                        	if ($search_on != 'off') {
-	                            	echo '<span class="fa fa-search c5-search-handle"></span>';
+	                            //	echo '<span class="fa fa-search c5-search-handle"></span>';
 	                        	}
 	                        ?>
 						</nav>

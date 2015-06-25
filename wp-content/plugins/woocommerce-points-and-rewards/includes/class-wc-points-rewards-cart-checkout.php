@@ -176,11 +176,11 @@ class WC_Points_Rewards_Cart_Checkout {
 	 */
 	public function render_redeem_points_message() {
 		global $wc_points_rewards;
-		//$points_balance = WC_Points_Rewards_Manager::get_users_points( get_current_user_id() );
-	//	$points_balance<60 ||
-
+	$points_balance = WC_Points_Rewards_Manager::get_users_points( get_current_user_id() );
+	$cluster = get_option( 'wc_points_rewards_cluster' );
+	
 		// don't display a message if coupons are disabled or points have already been applied for a discount
-		if ( WC()->cart->total<30 || ! WC()->cart->coupons_enabled() || WC()->cart->has_discount( WC_Points_Rewards_Discount::get_discount_code() ) ) {
+		if ( WC()->cart->total<30 || $points_balance<$cluster || ! WC()->cart->coupons_enabled() || WC()->cart->has_discount( WC_Points_Rewards_Discount::get_discount_code() ) ) {
 			return;
 		}
 
@@ -188,37 +188,76 @@ class WC_Points_Rewards_Cart_Checkout {
 		$discount_available = $this->get_discount_for_redeeming_points();
 
 		$message = get_option( 'wc_points_rewards_redeem_points_message' );
+		
 
 		// bail if no message set or no points will be earned for purchase
 		if ( ! $message || ! $discount_available ) {
 			return;
 		}
+		
+		$ratio= get_option( 'wc_points_rewards_redeem_points_ratio');
+        $ratio = str_replace("1:", "", $ratio);
+        $poinst_selected_post = $_POST['pointsselect'];
+		
+		if ($poinst_selected_post == null) { 
+		
+ $poinst_selected_post = $cluster;	
+ 
+ }
+		$actualdiscount = $ratio * $poinst_selected_post . get_woocommerce_currency_symbol();
+		
 
 		// points required to redeem for the discount available
 		$points  = WC_Points_Rewards_Manager::calculate_points_for_discount( $discount_available );
-		$message = str_replace( '{points}', number_format_i18n( $points ), $message );
+	    $message = str_replace( '{points}', $poinst_selected_post, $message );
 
 		// the maximum discount available given how many points the customer has
-		$message = str_replace( '{points_value}', woocommerce_price( $discount_available ), $message );
+		$message = str_replace( '{points_value}', $actualdiscount, $message );
 
 		// points label
 		$message = str_replace( '{points_label}', $wc_points_rewards->get_points_label( $points ), $message );
-
+		
+		
 		// add 'Apply Discount' button
+		
 		$message .= '<form class="wc_points_rewards_apply_discount" action="' . esc_url( WC()->cart->get_cart_url() ) . '" method="post">';
+		$message .=  '<select name="pointsselect" onchange="this.form.submit();">';
+		$x = $points;
+			$y = $x / $cluster; 
+			$z = 1;
+			
+			while($z <= $y) {
+				
+				 if ($z*$cluster == $poinst_selected_post ) {
+    $message .= "<option selected value='". $z*$cluster . "'>Usa " . $z*$cluster . " Patascoins</option>"; 
+	 $z++;
+} else {
+    $message .= "<option value='". $z*$cluster . "'>Usa " . $z*$cluster . " Patascoins</option>"; 
+	 $z++;
+}
+   
+} 
+ $message .=  "</select>";
 		$message .= '<input type="hidden" name="wc_points_rewards_apply_discount_amount" class="wc_points_rewards_apply_discount_amount" />';
 		$message .= '<input type="submit" class="button wc_points_rewards_apply_discount" name="wc_points_rewards_apply_discount" value="' . __( 'Apply Discount', 'woocommerce-points-and-rewards' ) . '" /></form>';
-
+		
 		// wrap with info div
 		$message = '<div class="woocommerce-info wc_points_rewards_earn_points">' . $message . '</div>';
 
 		echo apply_filters ( 'wc_points_rewards_redeem_points_message', $message, $discount_available );
 
 		if ( 'yes' === get_option( 'wc_points_rewards_partial_redemption_enabled' ) ) {
+			
+			
+ $poinst_selected = $_POST['pointsselect'];
+  
+ if ($poinst_selected == null) { 
+ $poinst_selected = $cluster;	
+ }
 			// Add code to prompt for points amount
 			wc_enqueue_js( '
 				$( "input.wc_points_rewards_apply_discount" ).click( function() {
-					var points = prompt( "' . esc_js( __( 'How many points would you like to apply?', 'woocommerce-points-and-rewards' ) ) . '", "' . $points . '" );
+					var points = "' . $poinst_selected . '";
 					if ( points != null ) {
 						$( "input.wc_points_rewards_apply_discount_amount" ).val( points );
 					}
