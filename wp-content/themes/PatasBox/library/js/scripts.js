@@ -71,6 +71,29 @@ jQuery(document).ready(function($) {
         $('.c5-article-content').addClass($(this).attr('class'));
 
     });
+	
+
+if ($(window).width() < 440) {
+$('button').on('click', function () {
+        if ($('#subcat .woocommerce.columns-4').is(':visible')) {
+            $(this).text('+');
+            $('#subcat .woocommerce.columns-4').hide( "fast" );
+        } else {
+            $(this).text("-");
+            $('#subcat .woocommerce.columns-4').show( "fast" );
+        }
+    });
+	
+	$('h2.tag').insertBefore('#sharing_product');
+	$('.shopdesc').insertBefore('#sharing_product');
+	
+	}
+	
+	
+	
+	
+	
+	
 
     //$('a[href*=#]:not([href=#])').click(function() {
 //        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -434,6 +457,61 @@ $(document).ready(function(){
 
 }); /* end of as page load scripts */
 
+
+( function( $ ) {
+	// store the slider in a local variable
+  var $window = $(window),
+      flexslider;
+ 
+  // tiny helper function to add breakpoints
+  function getGridSize() {
+    return (window.innerWidth < 600) ? 1 :
+           (window.innerWidth < 900) ? 2 : 3;
+  }
+
+	
+    $(window).load(function(){
+      $('#favoritos .flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+		itemWidth: 290,
+        itemMargin: 5,
+		move:1,
+		controlNav: false,
+        pausePlay: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        },
+		minItems: getGridSize(), // use function to pull in initial value
+      maxItems: getGridSize() // use function to pull in initial value
+      });
+    });
+	$window.resize(function() {
+    var gridSize = getGridSize();
+ 
+    
+  });
+	
+//$(window).load(function(){
+//      $('#favoritos .flexslider').flexslider({
+//        animation: "slide",
+//        animationLoop: false,
+//		controlNav: false,
+//		slideshow: false, 
+//        pausePlay: false,
+//		itemWidth: 357,
+//		startAt: 1, 
+//		touch:false,
+//		move: 1,
+//		prevText: "",           //String: Set the text for the "previous" directionNav item
+//        nextText: "",   
+//        start: function(slider){
+//          $('body').removeClass('loading');
+//        }
+//      });
+//    });
+	
+	} )( jQuery );
 
 /*! A fix for the iOS orientationchange zoom bug.
  Script by @scottjehl, rebound by @wilto.

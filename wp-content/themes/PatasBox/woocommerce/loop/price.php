@@ -13,5 +13,9 @@ global $product;
 ?>
 
 <?php if ( $price_html = $product->get_price_html() ) : ?>
+
+<?php  if ($product->is_in_stock()) : ?>
 	<span class="price"><?php echo $price_html; ?></span>
-<?php endif; ?>
+    <?php else: ?> 
+    <span class="price-out-of-stock">Fuera de stock</span>
+<?php endif; endif; ?>

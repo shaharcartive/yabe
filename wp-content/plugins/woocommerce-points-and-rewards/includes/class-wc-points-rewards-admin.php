@@ -556,6 +556,15 @@ class WC_Points_Rewards_Admin {
 				'default'  => '',
 				'type'     => 'text',
 			),
+			
+			// minimum
+			array(
+				'title'    => __( 'Minimum purchase', 'woocommerce-points-and-rewards' ),
+				'desc_tip' => __( 'Set the minimum.', 'woocommerce-points-and-rewards' ),
+				'id'       => 'wc_points_rewards_minimum',
+				'default'  => '',
+				'type'     => 'text',
+			),
 
 			// points label
 			array(

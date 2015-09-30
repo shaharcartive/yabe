@@ -138,6 +138,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <div class="cart-collaterals">
+<p class="return-to-shop"><a class="button wc-backward" href="<?php echo apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( wc_get_page_id( 'shop' ) ) ); ?>"><?php _e( 'Return To Shop', 'woocommerce' ) ?></a></p> 
 	<?php // do_action( 'woocommerce_cart_collaterals' ); ?>
 	<?php  woocommerce_cart_totals(); ?>
 </div>

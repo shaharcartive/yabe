@@ -553,11 +553,11 @@ class C5_build_header {
         <div class="c5-main-header-wrap c5-content-<?php echo $color_mode; ?>">
             <div class="c5-inner-header-wrap">
 
-                <!--<style  >
+                <style  >
                     .c5-main-header-wrap{
-                        background-image: url('<?php // echo esc_url($image_src) ?>');
+                        background-image: url('<?php  echo esc_url($image_src) ?>');
                     }
-                </style>-->
+                </style>
                 <?php
                 $width_class = 'c5-sidebar-hidden';
                 switch ($c5_skindata['page_width']) {

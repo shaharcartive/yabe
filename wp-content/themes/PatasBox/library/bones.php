@@ -149,7 +149,8 @@ function c5_scripts_and_styles() {
 		
 		// modernizr (without media query polyfill)
 		wp_enqueue_script( 'bones-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-
+		
+		
 		// register main stylesheet
 		wp_enqueue_style( 'c5-stylesheet', get_template_directory_uri() . '/library/css/style.css' );
 //		wp_enqueue_style( 'c5-diary-stylesheet', get_template_directory_uri() . '/library/less/style.less' );
@@ -202,6 +203,10 @@ function c5_scripts_and_styles() {
 		wp_register_script( 'tiptip-js', get_template_directory_uri() . '/library/js/libs/tiptip.js', array( 'jquery' ), '', true );
 		wp_register_script( 'isotope-js', get_template_directory_uri() . '/library/js/libs/isotope.pkgd.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'c5-sidebarEffects', get_template_directory_uri() . '/library/js/libs/sidebarEffects.js', array( 'jquery' ), '', true );
+		wp_register_script( 'flexslider', get_template_directory_uri() . '/library/js/libs/query.flexslider-min.js', array( 'jquery' ), '', true );
+		
+		
+
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 

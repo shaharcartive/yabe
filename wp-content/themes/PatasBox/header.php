@@ -96,6 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="c5-main-body-wrap  clearfix">
             <div class="c5-container-controller">
                 <span class="c5-close-button"></span>
+                
 
                 <?php
                 $header_obj->floating_bar();
@@ -110,3 +111,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     ?>
                     <div id="floating-trigger"></div>
                 <?php } ?>
+				
+                   <?php   if (is_woocommerce()) : ?>
+        <div class="section-6 bk-red">
+		<div class="section-6-1 c5ab_center c5ab-col-base c5ab-col-lg-4 c5ab-col-md-6 c5ab-col-sm-12 text-center dashed-white">
+        
+            <span class="text-center patascoins"><p>Envíos gratuitos a partir de 39.95 €</p>
+</span>
+		</div>
+       <div class="section-6-1 c5ab_center c5ab-col-base c5ab-col-lg-4 c5ab-col-md-6 c5ab-col-sm-12 text-center dashed-white">
+       <a href="/te-premiamos-con-patascoins/">  
+            <span class="text-center patascoins"><p>Te devolvemos el 5% de tu compra en PatasCoins</p>
+</span>
+	</a>	</div> 
+      <div class="section-6-1 c5ab_center c5ab-col-base c5ab-col-lg-4 c5ab-col-md-6 c5ab-col-sm-12 text-center dashed-white">
+            <span class="text-center patascoins"><p>Con tu compra ayudarás a otras mascotas</p>
+</span>
+		</div>
+	</div>
+     <?php endif ?>

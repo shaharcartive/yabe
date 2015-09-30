@@ -2,27 +2,7 @@
 global $c5_skindata;
 
 	?>
-    <?php if ( is_post_type_archive() ) : ?>
-    <!--<div class="c5-main-header-wrap c5-content-dark">
-            <div class="c5-inner-header-wrap">
-
-               
-                <div class="c5-main-width-wrap c5-main-page-wrap-sidebar c5-sidebar-active c5-page-right clearfix"><div class="c5-main-header-ad clearfix"></div><div class="row"><div class="c5-middle-control clearfix"><div class="c5-main-content-area c5-single-content clearfix">                <div class="c5-dark-shadow c5-content-dark">
-
-                    <div class="c5-header-data wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown; -webkit-animation-name: fadeInDown;">
-                       
-                                                	
-                            <p class="description">Hola! Bienvenidos a nuestra tienda</p>	
-                                                
-                        								
-							                                                             
-                    </div>
-                    </div>
-                </div>
-            </div>
-            </div></div></div>
-        </div>-->
-           <?php endif ?>
+  
  <div id="overlay"></div>
 <div id="main" class=" clearfix" role="main">
 
@@ -48,14 +28,14 @@ $term = $wp_query->get_queried_object();
  if($termid->parent > 0) { 
 
 } 
-elseif (($children) && is_product_category()) { echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Categorías </span> </h2>";
+elseif (($children) && is_product_category()) { echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span><button>+</button> Lo más guau </span> </h2>";
 }
 elseif (is_product_category()) {
   echo "";
  
 }
 
-elseif ( is_post_type_archive() ) { echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Categorías </span> </h2>"; }
+elseif ( is_post_type_archive() ) { echo "<h2 class='text-center title-line wow fadeInDown animated animated'> <span> Lo más guau </span> </h2>"; }
 
 
  
@@ -78,16 +58,11 @@ elseif ( is_post_type_archive() ) { echo "<h2 class='text-center title-line wow 
     </div>
     <?php if ( is_post_type_archive() ) : ?>
      <div id="subcat">
-   
-<ul id="catlist">
-<a href="../la-tienda/juguetes/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_jugutes.png" /></li></a>
-<a href="../la-tienda/complementos-e-higiene/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_complementos_y_higiene.png" /></li></a>
-<a href="../la-tienda/comida-y-premios/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_comida_y_premios.png" /></li></a>
-<a href="../la-tienda/caja-regalo/"><li><img src="<?php echo get_template_directory_uri(); ?>/img/cat_regala_hover.png" /><img class="top" src="<?php echo get_template_directory_uri(); ?>/img/cat_regala.png" /></li></a>
-</ul>
+   <?php echo do_shortcode('[product_categories number="4" parent="0"]');?>
+
 </div>
 <div style="clear:both"> &nbsp; </div>
-<h2 class="text-center title-line wow fadeInDown animated animated"> <span> CONSIGUE LOS FAVORITOS DE LA CAJA </span></h2>
+<h2 class="text-center title-line wow fadeInDown animated animated"> <span> Compra lo mejor de Patasbox </span></h2>
 
 <?php endif ?>
 </div>
@@ -101,8 +76,9 @@ elseif ( is_post_type_archive() ) { echo "<h2 class='text-center title-line wow 
 <?php   if (  is_product() ) : ?>
  <h2 class="text-center title-line wow fadeInDown animated animated"> <span> Nuestros favoritos <span> </h2>
  
-   
-   <ul class="products">
+     <section class="slider">
+        <div class="flexslider carousel">
+   <ul class="products slides">
 <?php
      $args = array( 'post_type' => 'product', 'meta_key' => '_featured','posts_per_page' => 15,'columns' => '3', 'meta_value' => 'yes' );
      $loop = new WP_Query( $args );
@@ -132,5 +108,7 @@ elseif ( is_post_type_archive() ) { echo "<h2 class='text-center title-line wow 
 <?php wp_reset_query(); ?>
 <?php endif ?>
 </ul>
+</div>
+      </section>
     </div>
 </div>

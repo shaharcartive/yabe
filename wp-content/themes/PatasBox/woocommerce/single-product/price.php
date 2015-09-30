@@ -13,7 +13,15 @@ global $post, $product;
 ?>
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
+
+
+<?php  if ($product->is_in_stock()) : ?>
 	<p class="price"><?php echo $product->get_price_html(); ?></p>
+    <?php else: ?> 
+    <p class="price-out-of-stock">Fuera de stock</p>
+<?php endif;  ?>
+
+	
 
 	<meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
 	<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />

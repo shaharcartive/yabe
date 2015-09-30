@@ -2,28 +2,7 @@
         
        
         
-         <?php   if (is_woocommerce()) : ?>
-        <div class="section-6 bk-red">
-		<div class="section-6-1 c5ab_center c5ab-col-base c5ab-col-lg-4 c5ab-col-md-6 c5ab-col-sm-12 text-center dashed-white">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/delivery.png" align="middle">
-			<h2 class="text-center">Envíos gratuitos*</h2>
-            <span class="text-center patascoins"><p>*A partir de 39.95 €<br /><br /></p>
-</span>
-		</div>
-        <div class="section-6-1 c5ab_center c5ab-col-base c5ab-col-lg-4 c5ab-col-md-6 c5ab-col-sm-12 text-center dashed-white">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/patasbox-patascoins.png" align="middle">
-			<h2 class="text-center">Patascoins</h2>
-            <span class="text-center patascoins"><p>Te devolvemos el 5% de tu compra en PatasCoins. </p>
-</span>
-		</div>
-        <div class="section-6-1 c5ab_center c5ab-col-base c5ab-col-lg-4 c5ab-col-md-6 c5ab-col-sm-12 text-center dashed-white">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/tested.png" align="middle">
-			<h2 class="text-center">Testado </h2>
-            <span class="text-center patascoins"><p>y aprobado por los Patasbox and friends</p>
-</span>
-		</div>
-	</div>
-     <?php endif ?>
+        
 			<footer class="footer" role="contentinfo">
 				<?php
 				 global $c5_footerdata;
